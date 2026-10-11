@@ -1,0 +1,14 @@
+# Configuración local del editor
+.vscode/
+
+# Capturas originales sin optimizar (las usadas están en img/)
+_originales/
+
+# Borradores del CV (se publica solo el PDF final)
+cv/*.docx
+~$*
+
+# Archivos del sistema
+Thumbs.db
+desktop.ini
+.DS_Store

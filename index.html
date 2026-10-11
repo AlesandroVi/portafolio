@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con JavaScript, Python y Flet.">
+    <meta name="author" content="Miguel Alesandro Villalba">
+    <meta name="theme-color" content="#150f24">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Miguel Alesandro Villalba | Portfolio">
+    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con JavaScript, Python y Flet.">
+    <meta property="og:image" content="https://alesandrovi.github.io/portafolio/img/portfolio-escritorio.jpg">
+    <title>Miguel Alesandro Villalba | Portfolio</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+
+            <!-- Botón del menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <h1><a href="#inicio">Miguel Alesandro Villalba</a></h1>
+
+        </div>
+
+        <nav id="menu-principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <section class="hero" id="inicio">
+        <div class="hero-img">
+
+            <img src="img/perfil.jpg" alt="Foto de perfil de Miguel Alesandro Villalba" width="280" height="280">
+
+            <div class="redes">
+                <a href="mailto:alesandrovill@gmail.com" aria-label="Correo">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-texto">
+            <h2 id="sobre-mi">Hola, soy Alesandro</h2>
+            <p>
+                Estudio desarrollo de software y estoy cursando el tercer año de la carrera.
+                Me gusta construir sistemas que resuelvan problemas concretos. Como proyectos
+                de la carrera desarrollé un sistema de stock y ventas pensado para un local de
+                bebidas y un sistema de gestión docente pensado para un instituto, que funciona
+                como programa de escritorio para Windows.
+            </p>
+            <p>
+                Programo en C, C++, Python y JavaScript, y trabajo con bases de datos MySQL
+                y SQLite. Para las aplicaciones de escritorio uso Flet, y actualmente estoy
+                aprendiendo a desarrollar aplicaciones web y móviles, con especial interés
+                en las Progressive Web Apps (PWA).
+            </p>
+            <a class="boton-cv" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
+                <i class="fa-solid fa-download"></i> Descargar CV
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================
+        SECCIÓN TECNOLOGÍAS
+    ========================== -->
+    <section class="tecnologias" id="tecnologias">
+        <h2>Tecnologías</h2>
+
+        <div class="grid-tecnologias">
+
+            <!-- Tarjeta 1 -->
+            <div class="card-tecnologia">
+                <h3>Lenguajes</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <i class="devicon-c-plain colored"></i>
+                        <span>C</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++</span>
+                    </div>
+                    <div class="tecnologia">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+                            alt="Python"
+                        />
+                        <span>Python</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card-tecnologia">
+                <h3>Desarrollo Web</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card-tecnologia">
+                <h3>Aplicaciones de Escritorio</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <i class="fa-solid fa-window-maximize icono-flet"></i>
+                        <span>Flet</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="card-tecnologia">
+                <h3>Bases de Datos</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-sqlite-plain colored"></i>
+                        <span>SQLite</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="card-tecnologia">
+                <h3>Herramientas</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>Visual Studio Code</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-github-original colored"></i>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="card-tecnologia">
+                <h3>Actualmente Profundizando</h3>
+
+                <div class="tec-iconos">
+                    <div class="tecnologia">
+                        <img class="icono-claro" src="img/pwa-svgrepo-com.svg" alt="Progressive Web App" />
+                        <span>Aplicaciones Web Progresivas</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================
+        SECCIÓN PROYECTOS
+    ========================== -->
+    <section class="proyectos" id="proyectos">
+
+        <h2>Proyectos</h2>
+
+        <!-- Proyecto 1 -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Sistema de Gestión Docente</h3>
+
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+                            alt="Python"
+                        />
+                        <i class="fa-solid fa-window-maximize icono-flet" title="Flet"></i>
+                        <i class="devicon-sqlite-plain colored" title="SQLite"></i>
+                    </div>
+                    <p>
+                        Aplicación de escritorio, desarrollada como proyecto de la carrera,
+                        para la administración del personal docente de un instituto de nivel superior. Permite registrar
+                        docentes (o importarlos desde Excel), cargar carreras, materias
+                        y designaciones, controlar licencias y suplencias, y generar
+                        constancias en PDF. Incluye contraseña de acceso, copias de
+                        seguridad automáticas y se distribuye como ejecutable para Windows.
+                    </p>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/docentes-inicio.jpg" alt="Pantalla de inicio del sistema de gestión docente" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/docentes-gestionar.jpg" alt="Listado de docentes cargados" loading="lazy">
+                <img class="captura" src="img/docentes-designaciones.jpg" alt="Formulario de nueva designación" loading="lazy">
+                <img class="captura" src="img/docentes-reportes.jpg" alt="Reporte de materias sin cubrir" loading="lazy">
+            </div>
+
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Sistema de Stock y Ventas de Bebidas</h3>
+
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-mysql-plain colored"></i>
+                    </div>
+                    <p>
+                        Sistema web, desarrollado como proyecto de la carrera, pensado
+                        para que un local de bebidas controle su stock y sus ventas.
+                    </p>
+                    <ul class="proyecto-funciones">
+                        <li>Catálogo con filtro por categoría (aguas, cervezas, gaseosas, isotónicas y jugos) y stock visible.</li>
+                        <li>Carrito de pedidos con cantidades editables, subtotales y total calculado automáticamente.</li>
+                        <li>Alta de productos con precio, stock, categoría y estado activo o inactivo.</li>
+                        <li>Datos guardados en una base de datos MySQL.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/bebidas.jpg" alt="Pantalla principal del sistema de bebidas" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/carrito.jpg" alt="Carrito de compras" loading="lazy">
+                <img class="captura" src="img/agregarP.jpg" alt="Formulario para agregar productos" loading="lazy">
+                <img class="captura" src="img/pedidosCargados.jpg" alt="Listado de pedidos cargados" loading="lazy">
+            </div>
+
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Portfolio Personal</h3>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/AlesandroVi/portafolio" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                    <a href="https://alesandrovi.github.io/portafolio/" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Sitio web
+                    </a>
+                </div>
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                    </div>
+                    <p>
+                        Este mismo sitio: un portfolio responsive, con menú
+                        hamburguesa para celulares, desarrollado para presentar
+                        mis proyectos y tecnologías de manera clara y accesible.
+                    </p>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/portfolio-escritorio.jpg" alt="Portfolio en una pantalla de computadora" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/portfolio-celular.jpg" alt="Portfolio en un celular" loading="lazy">
+                <img class="captura" src="img/portfolio-menu.jpg" alt="Menú hamburguesa abierto en el celular" loading="lazy">
+                <img class="captura" src="img/portfolio-tecnologias.jpg" alt="Sección de tecnologías" loading="lazy">
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- ==========================
+        SECCIÓN CONTACTO
+    ========================== -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tenés una consulta o un proyecto en mente? Escribime.</p>
+        <a class="email-contacto" href="mailto:alesandrovill@gmail.com">alesandrovill@gmail.com</a>
+
+        <div class="redes">
+            <a href="mailto:alesandrovill@gmail.com" aria-label="Correo">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+
+        <a class="boton-cv" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
+            <i class="fa-solid fa-download"></i> Descargar CV
+        </a>
+    </section>
+
+    </main>
+
+    <footer class="pie">
+        <p>&copy; <span id="anio">2026</span> Miguel Alesandro Villalba · Hecho con HTML, CSS y JavaScript</p>
+    </footer>
+
+    <!-- Visor de capturas (se abre al tocar una imagen de los proyectos) -->
+    <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Captura ampliada" hidden>
+        <button class="visor-cerrar" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img src="" alt="">
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
