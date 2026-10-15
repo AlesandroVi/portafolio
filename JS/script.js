@@ -88,3 +88,39 @@ if (visor) {
 
 const anio = document.getElementById("anio");
 if (anio) anio.textContent = new Date().getFullYear();
+
+// ==========================
+// MODO CLARO / OSCURO
+// ==========================
+
+const botonTema = document.querySelector(".boton-tema");
+const metaTema = document.querySelector('meta[name="theme-color"]');
+
+function aplicarTema(tema) {
+    const claro = tema === "light";
+    if (claro) {
+        document.documentElement.setAttribute("data-theme", "light");
+    } else {
+        document.documentElement.removeAttribute("data-theme");
+    }
+    if (botonTema) {
+        // El ícono muestra el modo al que se pasa al tocarlo
+        botonTema.querySelector("i").className = claro ? "fa-solid fa-moon" : "fa-solid fa-sun";
+        botonTema.setAttribute("aria-label", claro ? "Cambiar a modo oscuro" : "Cambiar a modo claro");
+    }
+    if (metaTema) {
+        metaTema.setAttribute("content", claro ? "#f7f5fc" : "#150f24");
+    }
+}
+
+if (botonTema) {
+    aplicarTema(document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark");
+
+    botonTema.addEventListener("click", () => {
+        const nuevo = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+        aplicarTema(nuevo);
+        try {
+            localStorage.setItem("tema", nuevo);
+        } catch (e) {}
+    });
+}

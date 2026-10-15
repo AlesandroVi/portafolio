@@ -9,6 +9,7 @@ Portfolio personal donde presento mis proyectos y las tecnologías con las que t
 ## Características
 
 - Diseño responsive, con menú hamburguesa accesible en celulares.
+- Modo claro y oscuro (oscuro por defecto); la elección se recuerda en el navegador.
 - Secciones de presentación, tecnologías, proyectos y contacto.
 - Visor de capturas: al tocar una imagen de un proyecto se abre ampliada (se cierra con la X, tocando afuera o con `Escape`).
 - Navegable con teclado y respeta la preferencia de reducir animaciones.
@@ -17,7 +18,7 @@ Portfolio personal donde presento mis proyectos y las tecnologías con las que t
 ## Tecnologías
 
 - HTML5
-- CSS3 (Flexbox, Grid, media queries)
+- CSS3 (Flexbox, Grid, media queries, variables)
 - JavaScript
 - [Font Awesome](https://fontawesome.com/) y [Devicon](https://devicon.dev/) para los íconos
 
@@ -26,7 +27,7 @@ Portfolio personal donde presento mis proyectos y las tecnologías con las que t
 ```
 ├── index.html      # Página principal
 ├── style.css       # Estilos
-├── JS/script.js    # Menú hamburguesa, visor de capturas y año del pie
+├── JS/script.js    # Menú hamburguesa, visor de capturas, modo claro/oscuro y año del pie
 └── img/            # Foto de perfil, capturas de proyectos y favicon
 ```
 
