@@ -48,13 +48,13 @@
             <img src="img/perfil.jpg" alt="Foto de perfil de Miguel Alesandro Villalba" width="280" height="280">
 
             <div class="redes">
-                <a href="mailto:alesandrovill@gmail.com" aria-label="Correo">
+                <a href="mailto:alesandrovill@gmail.com" aria-label="Correo" title="Enviarme un correo">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn" title="Mi perfil de LinkedIn">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub">
+                <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub" title="Mi perfil de GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
             </div>
@@ -70,10 +70,14 @@
                 como programa de escritorio para Windows.
             </p>
             <p>
-                Programo en C, Python, PHP y JavaScript, y trabajo con bases de datos MySQL
-                y SQLite. Para las aplicaciones de escritorio uso Flet, y actualmente estoy
+                Programo en Python, PHP, JavaScript y C, y trabajo con bases de datos MySQL
+                y SQLite. Me interesa construir herramientas internas que ordenen datos,
+                automaticen tareas repetitivas y generen reportes útiles. Actualmente estoy
                 aprendiendo a desarrollar aplicaciones web y móviles, con especial interés
                 en las Progressive Web Apps (PWA).
+            </p>
+            <p>
+                Busco mi primera experiencia como desarrollador junior o trainee.
             </p>
             <a class="boton-cv" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
                 <i class="fa-solid fa-download"></i> Descargar CV
@@ -229,12 +233,16 @@
                     </div>
                     <p>
                         Aplicación de escritorio, desarrollada como proyecto de la carrera,
-                        para la administración del personal docente de un instituto de nivel superior. Permite registrar
-                        docentes (o importarlos desde Excel), cargar carreras, materias
-                        y designaciones, controlar licencias y suplencias, y generar
-                        constancias en PDF. Incluye contraseña de acceso, copias de
-                        seguridad automáticas y se distribuye como ejecutable para Windows.
+                        para la administración del personal docente de un instituto de nivel superior.
                     </p>
+                    <ul class="proyecto-funciones">
+                        <li>Alta, edición y búsqueda de docentes, con importación y exportación de planillas Excel.</li>
+                        <li>Carreras, materias y designaciones, con control de licencias y suplencias.</li>
+                        <li>Reportes de materias sin cubrir y de docentes ausentes sin suplente.</li>
+                        <li>Constancias en PDF con los datos de la institución configurables.</li>
+                        <li>Contraseña guardada como hash PBKDF2, copias de seguridad automáticas y pruebas unitarias de las validaciones.</li>
+                        <li>Se distribuye como ejecutable para Windows.</li>
+                    </ul>
                 </div>
 
                 <div class="proyecto-demo">
@@ -281,8 +289,9 @@
                     <ul class="proyecto-funciones">
                         <li>Catálogo con filtro por categoría (aguas, cervezas, gaseosas, isotónicas y jugos) y stock visible.</li>
                         <li>Carrito de pedidos con cantidades editables, subtotales y total calculado automáticamente.</li>
-                        <li>Alta de productos con precio, stock, categoría y estado activo o inactivo.</li>
-                        <li>Pedidos con detalle guardados en MySQL, con descuento automático de stock y consultas preparadas.</li>
+                        <li>Cada pedido se confirma dentro de una transacción: se guarda completo o no se guarda, y descuenta el stock.</li>
+                        <li>Panel de administración con resumen del día, alertas de stock bajo, gestión de productos y listado de pedidos.</li>
+                        <li>Contraseñas con hash, bloqueo tras intentos fallidos, protección CSRF y consultas preparadas.</li>
                     </ul>
                 </div>
 
@@ -356,13 +365,13 @@
         <a class="email-contacto" href="mailto:alesandrovill@gmail.com">alesandrovill@gmail.com</a>
 
         <div class="redes">
-            <a href="mailto:alesandrovill@gmail.com" aria-label="Correo">
+            <a href="mailto:alesandrovill@gmail.com" aria-label="Correo" title="Enviarme un correo">
                 <i class="fa-solid fa-envelope"></i>
             </a>
-            <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn" title="Mi perfil de LinkedIn">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub">
+            <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub" title="Mi perfil de GitHub">
                 <i class="fa-brands fa-github"></i>
             </a>
         </div>
