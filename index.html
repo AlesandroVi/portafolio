@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con JavaScript, Python y Flet.">
+    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con React, Supabase, Python y Flet.">
     <meta name="author" content="Miguel Alesandro Villalba">
     <meta name="theme-color" content="#150f24">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miguel Alesandro Villalba | Portfolio">
-    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con JavaScript, Python y Flet.">
+    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con React, Supabase, Python y Flet.">
     <meta property="og:image" content="https://alesandrovi.github.io/portafolio/img/portfolio-escritorio.jpg">
     <title>Miguel Alesandro Villalba | Portfolio</title>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -67,11 +67,12 @@
                 Me gusta construir sistemas que resuelvan problemas concretos. Como proyectos
                 de la carrera desarrollé un sistema de stock y ventas pensado para un local de
                 bebidas y un sistema de gestión docente pensado para un instituto, que funciona
-                como programa de escritorio para Windows.
+                como programa de escritorio para Windows. Por mi cuenta hice un sistema web de
+                mantenimiento e inventario de repuestos pensado para una planta industrial.
             </p>
             <p>
-                Programo en Python, PHP, JavaScript y C, y trabajo con bases de datos MySQL
-                y SQLite. Me interesa construir herramientas internas que ordenen datos,
+                Programo en Python, PHP, JavaScript y C, y trabajo con bases de datos MySQL,
+                SQLite y PostgreSQL (Supabase). Me interesa construir herramientas internas que ordenen datos,
                 automaticen tareas repetitivas y generen reportes útiles. Actualmente estoy
                 aprendiendo a desarrollar aplicaciones web y móviles, con especial interés
                 en las Progressive Web Apps (PWA).
@@ -133,6 +134,14 @@
                         <i class="devicon-css3-plain colored"></i>
                         <span>CSS3</span>
                     </div>
+                    <div class="tecnologia">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
                 </div>
             </div>
 
@@ -160,6 +169,14 @@
                     <div class="tecnologia">
                         <i class="devicon-sqlite-plain colored"></i>
                         <span>SQLite</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="devicon-supabase-plain colored"></i>
+                        <span>Supabase</span>
                     </div>
                 </div>
             </div>
@@ -207,6 +224,59 @@
         <h2>Proyectos</h2>
 
         <!-- Proyecto 1 -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Sistema de Mantenimiento de Planta</h3>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/AlesandroVi/mantenimiento-planta" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                    <a href="https://alesandrovi.github.io/mantenimiento-planta/" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo en línea
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <i class="devicon-react-original colored" title="React"></i>
+                        <i class="devicon-tailwindcss-original colored" title="Tailwind CSS"></i>
+                        <i class="devicon-supabase-plain colored" title="Supabase"></i>
+                        <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                    </div>
+                    <p>
+                        Sistema web, desarrollado como proyecto personal, para el área de mantenimiento
+                        de una planta industrial: equipos, órdenes de trabajo y stock del pañol de repuestos.
+                    </p>
+                    <ul class="proyecto-funciones">
+                        <li>Órdenes de trabajo preventivas y correctivas con el ciclo pendiente, en curso y cerrada, prioridad y técnico asignado.</li>
+                        <li>Stock de repuestos con alerta de stock bajo; cada ingreso y retiro queda registrado con su orden de trabajo.</li>
+                        <li>Panel con reportes: órdenes por área, repuestos más usados y tiempo promedio de resolución, con exportación a CSV.</li>
+                        <li>Roles de supervisor y técnico con permisos controlados en la base de datos con Row Level Security, verificados con 29 pruebas automáticas.</li>
+                        <li>Publicado en GitHub Pages con datos de prueba que se reinician todas las noches.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/mantenimiento-panel.jpg" alt="Panel del sistema de mantenimiento con indicadores y reportes" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/mantenimiento-ordenes.jpg" alt="Listado de órdenes de trabajo" loading="lazy">
+                <img class="captura" src="img/mantenimiento-orden.jpg" alt="Detalle de una orden de trabajo con repuestos usados" loading="lazy">
+                <img class="captura" src="img/mantenimiento-repuestos.jpg" alt="Stock de repuestos con alertas de stock bajo" loading="lazy">
+            </div>
+
+        </article>
+
+        <!-- Proyecto 2 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
@@ -259,7 +329,7 @@
 
         </article>
 
-        <!-- Proyecto 2 -->
+        <!-- Proyecto 3 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
@@ -309,7 +379,7 @@
 
         </article>
 
-        <!-- Proyecto 3 -->
+        <!-- Proyecto 4 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
