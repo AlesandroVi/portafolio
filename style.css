@@ -376,6 +376,18 @@ i.devicon-mysql-plain.colored {
     border-color: var(--acento);
 }
 
+/* Etiqueta para proyectos de clientes: parece un botón de link pero no se toca (el código es privado) */
+.proyecto-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px dashed var(--borde-fuerte);
+    border-radius: 8px;
+    color: var(--texto-suave);
+    font-size: 0.95em;
+}
+
 .proyecto-contenido {
     display: grid;
     grid-template-columns: 1fr 2fr;
