@@ -6,13 +6,17 @@ Portfolio personal donde presento mis proyectos y las tecnologías con las que t
 
 ![Vista del portfolio en escritorio](img/portfolio-escritorio.jpg)
 
+![Vista en el celular, en modo oscuro y modo claro](img/portfolio-celular.jpg)
+
 ## Características
 
-- Diseño responsive, con menú hamburguesa accesible en celulares.
-- Modo claro y oscuro (oscuro por defecto); la elección se recuerda en el navegador.
-- Secciones de presentación, tecnologías, proyectos y contacto.
-- Visor de capturas: al tocar una imagen de un proyecto se abre ampliada (se cierra con la X, tocando afuera o con `Escape`).
+- Diseño responsive: en el celular las funciones de cada proyecto se pliegan y las capturas se deslizan con el dedo.
+- Modo claro y oscuro (oscuro por defecto) con paleta grafito y ámbar; la elección se recuerda en el navegador.
+- Secciones de presentación, tecnologías, proyectos (con índice para saltar a cada uno) y contacto.
+- Visor de capturas: al tocar una imagen de un proyecto se abre ampliada, con anterior y siguiente (se cierra con la X, tocando afuera o con `Escape`).
+- Animaciones sobrias: entrada del inicio, proyectos que entran de costado al scrollear y cambio de tema en círculo.
 - Navegable con teclado y respeta la preferencia de reducir animaciones.
+- Imagen de vista previa para cuando se comparte el enlace (WhatsApp, LinkedIn).
 - Sin frameworks ni proceso de compilación: HTML, CSS y JavaScript puros.
 
 ## Tecnologías
@@ -27,7 +31,7 @@ Portfolio personal donde presento mis proyectos y las tecnologías con las que t
 ```
 ├── index.html      # Página principal
 ├── style.css       # Estilos
-├── JS/script.js    # Menú hamburguesa, visor de capturas, modo claro/oscuro y año del pie
+├── JS/script.js    # Menú, visor de capturas, modo claro/oscuro, animaciones y año del pie
 └── img/            # Foto de perfil, capturas de proyectos y favicon
 ```
 
