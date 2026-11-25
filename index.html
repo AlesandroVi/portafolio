@@ -110,8 +110,9 @@
                         electrónica para un corralón y ferretería que antes trabajaba todo en papel.
                     </p>
                     <p>
-                        En la carrera hice un sistema de stock y ventas para un local de bebidas y un sistema
-                        de gestión docente para un instituto. Por mi cuenta hice un sistema web de mantenimiento
+                        En la carrera hice un sistema de stock y ventas para un local de bebidas, un gestor de
+                        préstamos en cuotas y, con mi equipo, un sistema de gestión docente que hoy usa la
+                        secretaría de un instituto terciario. Por mi cuenta hice un sistema web de mantenimiento
                         para una planta industrial y un CRM que ordena mi correo con inteligencia artificial.
                     </p>
                     <p>
@@ -310,36 +311,73 @@
             <!-- Proyecto 4 -->
             <article class="proyecto">
                 <div class="proyecto-texto">
-                    <p class="tipo">Proyecto de la carrera</p>
+                    <p class="tipo tipo-cliente"><span class="estado-punto" aria-hidden="true"></span>Proyecto en equipo, en uso en un instituto</p>
                     <h3>Gestión docente</h3>
                     <ul class="pila" aria-label="Tecnologías">
                         <li>Python</li><li>Flet</li><li>SQLite</li>
                     </ul>
                     <p>
-                        Aplicación de escritorio para administrar el personal docente de un instituto de nivel superior.
+                        Aplicación de escritorio para la secretaría de un instituto de nivel superior.
+                        Empezó como proyecto de la carrera, en equipo con tres compañeros; la instalamos
+                        en el instituto y la seguimos actualizando según lo que piden al usarla (versión 3.3.1).
                     </p>
                     <ul class="funciones">
-                        <li>Alta, edición y búsqueda de docentes, con importación y exportación de planillas Excel.</li>
-                        <li>Carreras, materias y designaciones, con control de licencias y suplencias.</li>
-                        <li>Reportes de materias sin cubrir y de docentes ausentes sin suplente.</li>
-                        <li>Constancias en PDF con los datos de la institución configurables.</li>
-                        <li>Contraseña guardada como hash PBKDF2, copias de seguridad automáticas y pruebas unitarias. Se distribuye como ejecutable para Windows.</li>
+                        <li>Legajo de docentes con ficha completa (situación actual, materias, licencias y carpeta médica), búsqueda sin tildes e importación y exportación de Excel.</li>
+                        <li>Carreras, materias, designaciones y suplencias, y una grilla semanal de horarios que detecta choques de docente, curso y aula.</li>
+                        <li>Inicio con indicadores y avisos: reposos, licencias, materias sin cubrir y designaciones por vencer.</li>
+                        <li>Constancias de trabajo, de examen y de licencia médica en PDF, con número correlativo y libro de constancias emitidas.</li>
+                        <li>283 pruebas automáticas, revisión de bugs con pruebas de regresión y auditoría de seguridad (Gitleaks, Semgrep, Bandit, pip-audit) sin hallazgos críticos ni altos.</li>
+                        <li>Contraseña con hash PBKDF2, copias de seguridad automáticas, migraciones de la base y ejecutable portable para Windows con manual de usuario.</li>
                     </ul>
                     <div class="enlaces">
                         <a href="https://github.com/AlesandroVi/gestion-docente" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                     </div>
                 </div>
                 <div class="proyecto-medios">
-                    <img class="captura principal" src="img/docentes-inicio.jpg" alt="Pantalla de inicio del sistema de gestión docente" width="1400" height="760" loading="lazy">
+                    <img class="captura principal" src="img/docentes-inicio.jpg" alt="Pantalla de inicio del sistema de gestión docente" width="1366" height="800" loading="lazy">
                     <div class="miniaturas">
-                        <img class="captura" src="img/docentes-gestionar.jpg" alt="Listado de docentes cargados" width="1400" height="760" loading="lazy">
-                        <img class="captura" src="img/docentes-designaciones.jpg" alt="Formulario de nueva designación" width="1400" height="760" loading="lazy">
-                        <img class="captura" src="img/docentes-reportes.jpg" alt="Reporte de materias sin cubrir" width="1400" height="760" loading="lazy">
+                        <img class="captura" src="img/docentes-horarios.jpg" alt="Grilla semanal de horarios de una carrera" width="1366" height="800" loading="lazy">
+                        <img class="captura" src="img/docentes-ficha.jpg" alt="Ficha de un docente con su situación actual y sus datos" width="1366" height="800" loading="lazy">
+                        <img class="captura" src="img/docentes-avisos.jpg" alt="Campanita de avisos con reposos, licencias y materias sin cubrir" width="1366" height="800" loading="lazy">
                     </div>
                 </div>
             </article>
 
             <!-- Proyecto 5 -->
+            <article class="proyecto">
+                <div class="proyecto-texto">
+                    <p class="tipo">Proyecto de la carrera</p>
+                    <h3>Gestor de préstamos</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>Python</li><li>Flet</li><li>SQLite</li>
+                    </ul>
+                    <p>
+                        Aplicación de escritorio para administrar préstamos personales en cuotas:
+                        clientes, cobros, vencimientos y reportes (versión 3.0.0).
+                    </p>
+                    <ul class="funciones">
+                        <li>Panel con indicadores de lo prestado, cobrado, saldo y morosidad, gráfico mensual y filtro por fechas.</li>
+                        <li>Préstamos en cuotas con interés, cobro con la fecha real del pago, punitorio diario por mora y cancelación anticipada con descuento.</li>
+                        <li>Recibo en PDF por cada cuota, con número correlativo e importe en letras, y reportes PDF por cliente y por préstamo.</li>
+                        <li>Vencimientos próximos y vencidos con aviso al cliente por WhatsApp, y ficha del cliente con todo su historial.</li>
+                        <li>Exportación a Excel y CSV, y validación de DNI, teléfono, email, montos y fechas.</li>
+                        <li>Login con hash PBKDF2 y bloqueo tras intentos fallidos, migración automática de la base y ejecutable para Windows.</li>
+                    </ul>
+                    <div class="enlaces">
+                        <a href="https://github.com/AlesandroVi/gestor-prestamos" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
+                    </div>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/prestamos-dashboard.jpg" alt="Panel del gestor de préstamos con indicadores y gráfico de cobranza" width="1366" height="800" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/prestamos-clientes.jpg" alt="Gestión de clientes con formulario y listado" width="1366" height="800" loading="lazy">
+                        <img class="captura" src="img/prestamos-prestamos.jpg" alt="Alta de préstamos y listado con estado de cada uno" width="1366" height="800" loading="lazy">
+                        <img class="captura" src="img/prestamos-vencimientos.jpg" alt="Vencimientos con recargo por mora y aviso por WhatsApp" width="1366" height="800" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 6 -->
             <article class="proyecto">
                 <div class="proyecto-texto">
                     <p class="tipo">Proyecto de la carrera</p>
