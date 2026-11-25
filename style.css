@@ -474,19 +474,29 @@ ul {
     100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--en-uso) 0%, transparent); }
 }
 
-/* Proyectos que entran al scrollear (la clase la pone el JS, así sin JS se ve todo) */
+/* Proyectos que entran al scrollear, de costado: cada uno llega desde el lado de su captura
+   (la clase la pone el JS, así sin JS se ve todo) */
+#proyectos {
+    overflow-x: clip; /* evita la barra horizontal mientras entran; no rompe las capturas fijas */
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .revelar {
+        --desde: 80px;
         opacity: 0;
-        transform: translateY(64px);
+        transform: translateX(var(--desde));
         transition:
             opacity 0.7s ease-out,
             transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
     }
 
+    .revelar.proyecto-invertido {
+        --desde: -80px;
+    }
+
     .revelar .proyecto-medios {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateX(calc(var(--desde) * 0.75));
         transition:
             opacity 0.7s 0.15s ease-out,
             transform 0.9s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1);
