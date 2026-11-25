@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
+    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: sistemas de gestión web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
     <meta name="author" content="Miguel Alesandro Villalba">
-    <meta name="theme-color" content="#150f24">
+    <meta name="theme-color" content="#16121f">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miguel Alesandro Villalba | Portfolio">
-    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
-    <meta property="og:image" content="https://alesandrovi.github.io/portafolio/img/portfolio-escritorio.jpg">
+    <meta property="og:description" content="Sistemas de gestión para negocios reales: ventas, stock, facturación y más.">
+    <meta property="og:image" content="https://alesandrovi.github.io/portafolio/img/corralon-ventas.png">
     <title>Miguel Alesandro Villalba | Portfolio</title>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <script>
@@ -19,583 +19,411 @@
             }
         } catch (e) {}
     </script>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="encabezado">
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-            <!-- Botón del menú hamburguesa -->
-            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+    <header class="barra">
+        <div class="barra-interior contenedor">
+            <a class="marca" href="#inicio">
+                <img src="img/perfil.jpg" alt="" width="36" height="36">
+                <span>Alesandro Villalba</span>
+            </a>
 
-            <h1><a href="#inicio">Miguel Alesandro Villalba</a></h1>
+            <nav id="menu-principal" class="menu" aria-label="Principal">
+                <ul>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#tecnologias">Tecnologías</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
 
+            <div class="barra-acciones">
+                <button class="boton-icono boton-tema" type="button" aria-label="Cambiar a modo claro">
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
+                <button class="boton-icono menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
-
-        <nav id="menu-principal">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#tecnologias">Tecnologías</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-
-        <button class="boton-tema" type="button" aria-label="Cambiar a modo claro">
-            <i class="fa-solid fa-sun" aria-hidden="true"></i>
-        </button>
     </header>
 
-    <main>
+    <main id="contenido">
 
-    <section class="hero" id="inicio">
-        <div class="hero-img">
-
-            <img src="img/perfil.jpg" alt="Foto de perfil de Miguel Alesandro Villalba" width="280" height="280">
-
-            <div class="redes">
-                <a href="mailto:alesandrovill@gmail.com" aria-label="Correo" title="Enviarme un correo">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn" title="Mi perfil de LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub" title="Mi perfil de GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-texto">
-            <h2 id="sobre-mi">Hola, soy Alesandro</h2>
-            <p>
-                Estudio desarrollo de software y estoy cursando el tercer año de la carrera.
-                Me gusta construir sistemas que resuelvan problemas concretos. Para un cliente real
-                desarrollé e instalé un sistema de ventas, stock, cuentas corrientes y facturación
-                electrónica para un corralón y ferretería, que hoy está en uso. Como proyectos
-                de la carrera desarrollé un sistema de stock y ventas pensado para un local de
-                bebidas y un sistema de gestión docente pensado para un instituto, que funciona
-                como programa de escritorio para Windows. Por mi cuenta hice un sistema web de
-                mantenimiento e inventario de repuestos pensado para una planta industrial y un CRM
-                personal que ordena mi correo con inteligencia artificial y me ayuda en la búsqueda laboral.
-            </p>
-            <p>
-                Programo en Python, PHP, JavaScript y C, y trabajo con bases de datos MySQL,
-                SQLite y PostgreSQL (Supabase). Me interesa construir herramientas internas que ordenen datos,
-                automaticen tareas repetitivas y generen reportes útiles. Actualmente estoy
-                aprendiendo a desarrollar aplicaciones web y móviles, con especial interés
-                en las Progressive Web Apps (PWA).
-            </p>
-            <p>
-                Busco mi primera experiencia como desarrollador junior o trainee.
-            </p>
-            <a class="boton-cv" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
-                <i class="fa-solid fa-download"></i> Descargar CV
-            </a>
-        </div>
-    </section>
-
-    <!-- ==========================
-        SECCIÓN TECNOLOGÍAS
-    ========================== -->
-    <section class="tecnologias" id="tecnologias">
-        <h2>Tecnologías</h2>
-
-        <div class="grid-tecnologias">
-
-            <!-- Tarjeta 1 -->
-            <div class="card-tecnologia">
-                <h3>Lenguajes</h3>
-
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <i class="devicon-c-plain colored"></i>
-                        <span>C</span>
-                    </div>
-                    <div class="tecnologia">
-                        <img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
-                            alt="Python"
-                        />
-                        <span>Python</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-php-plain colored"></i>
-                        <span>PHP</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-javascript-plain colored"></i>
-                        <span>JavaScript</span>
-                    </div>
+        <!-- ==========================
+            INICIO
+        ========================== -->
+        <section class="hero contenedor" id="inicio">
+            <div class="hero-texto">
+                <h1>Hago sistemas de gestión para negocios que trabajan de verdad.</h1>
+                <p class="hero-bajada">
+                    Soy Miguel Alesandro Villalba, estudiante de tercer año de Desarrollo de Software.
+                    Desarrollo sistemas de ventas, stock y facturación, y uno de ellos ya se usa todos
+                    los días en un corralón. Busco mi primera experiencia como desarrollador junior o trainee.
+                </p>
+                <div class="hero-acciones">
+                    <a class="boton boton-principal" href="#proyectos">Ver proyectos</a>
+                    <a class="boton boton-secundario" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
+                    </a>
                 </div>
+                <ul class="redes" aria-label="Redes">
+                    <li><a href="mailto:alesandrovill@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
 
-            <!-- Tarjeta 2 -->
-            <div class="card-tecnologia">
-                <h3>Desarrollo Web</h3>
-
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <i class="devicon-html5-plain colored"></i>
-                        <span>HTML5</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-css3-plain colored"></i>
-                        <span>CSS3</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-react-original colored"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-tailwindcss-original colored"></i>
-                        <span>Tailwind CSS</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-fastapi-plain colored"></i>
-                        <span>FastAPI</span>
-                    </div>
+            <figure class="hero-captura">
+                <div class="ventana">
+                    <div class="ventana-barra" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <img src="img/corralon-ventas.png" alt="Pantalla de ventas y presupuestos del sistema del corralón" width="1365" height="768">
                 </div>
-            </div>
+                <figcaption class="estado">
+                    <span class="estado-punto" aria-hidden="true"></span>
+                    En uso en un corralón y ferretería desde octubre de 2026
+                </figcaption>
+            </figure>
+        </section>
 
-            <!-- Tarjeta 3 -->
-            <div class="card-tecnologia">
-                <h3>Aplicaciones de Escritorio</h3>
+        <!-- ==========================
+            SOBRE MÍ
+        ========================== -->
+        <section class="seccion contenedor sobre-mi" id="sobre-mi">
+            <h2 class="titulo-seccion">Sobre mí</h2>
 
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <i class="fa-solid fa-window-maximize icono-flet"></i>
-                        <span>Flet</span>
-                    </div>
-                </div>
-            </div>
+            <div class="sobre-grid">
+                <img class="foto" src="img/perfil.jpg" alt="Foto de perfil de Miguel Alesandro Villalba" width="280" height="280" loading="lazy">
 
-            <!-- Tarjeta 4 -->
-            <div class="card-tecnologia">
-                <h3>Bases de Datos</h3>
-
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <i class="devicon-mysql-plain colored"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-sqlite-plain colored"></i>
-                        <span>SQLite</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-postgresql-plain colored"></i>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-supabase-plain colored"></i>
-                        <span>Supabase</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 5 -->
-            <div class="card-tecnologia">
-                <h3>Herramientas</h3>
-
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <i class="devicon-vscode-plain colored"></i>
-                        <span>Visual Studio Code</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-git-plain colored"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-github-original colored"></i>
-                        <span>GitHub</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="devicon-githubactions-plain colored"></i>
-                        <span>GitHub Actions</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tarjeta 6 -->
-            <div class="card-tecnologia">
-                <h3>Actualmente Profundizando</h3>
-
-                <div class="tec-iconos">
-                    <div class="tecnologia">
-                        <img class="icono-claro" src="img/pwa-svgrepo-com.svg" alt="Progressive Web App" />
-                        <span>Aplicaciones Web Progresivas</span>
-                    </div>
-                    <div class="tecnologia">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        <span>IA aplicada (API de Gemini)</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ==========================
-        SECCIÓN PROYECTOS
-    ========================== -->
-    <section class="proyectos" id="proyectos">
-
-        <h2>Proyectos</h2>
-
-        <!-- Proyecto 1 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Sistema para corralón y ferretería</h3>
-
-                <div class="proyecto-links">
-                    <span class="proyecto-etiqueta" title="Es un trabajo para un cliente: el código no es público">
-                        <i class="fa-solid fa-lock"></i> Cliente real · código privado
-                    </span>
+                <div class="sobre-texto">
+                    <p>
+                        Me gusta construir sistemas que resuelvan problemas concretos. Para un cliente real
+                        desarrollé e instalé un sistema de ventas, stock, cuentas corrientes y facturación
+                        electrónica para un corralón y ferretería que antes trabajaba todo en papel.
+                    </p>
+                    <p>
+                        En la carrera hice un sistema de stock y ventas para un local de bebidas y un sistema
+                        de gestión docente para un instituto. Por mi cuenta hice un sistema web de mantenimiento
+                        para una planta industrial y un CRM que ordena mi correo con inteligencia artificial.
+                    </p>
+                    <p>
+                        Programo en Python, PHP, JavaScript y C, y trabajo con MySQL, SQLite y PostgreSQL
+                        (Supabase). Me interesan las herramientas internas: ordenar datos, automatizar tareas
+                        repetitivas y generar reportes que sirvan.
+                    </p>
                 </div>
 
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
-                            alt="Python"
-                        />
-                        <i class="fa-solid fa-window-maximize icono-flet" title="Flet"></i>
-                        <i class="devicon-sqlite-plain colored" title="SQLite"></i>
+                <dl class="datos">
+                    <div>
+                        <dt>Estudio</dt>
+                        <dd>Desarrollo de Software, 3.<sup>er</sup> año</dd>
                     </div>
+                    <div>
+                        <dt>Busco</dt>
+                        <dd>Primera experiencia junior o trainee</dd>
+                    </div>
+                    <div>
+                        <dt>Aprendiendo</dt>
+                        <dd>Apps web progresivas (PWA) e IA aplicada</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ==========================
+            TECNOLOGÍAS
+        ========================== -->
+        <section class="seccion contenedor" id="tecnologias">
+            <h2 class="titulo-seccion">Tecnologías</h2>
+
+            <div class="tec-lista">
+                <div class="tec-fila">
+                    <h3>Lenguajes</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-c-plain colored" aria-hidden="true"></i>C</li>
+                        <li><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</li>
+                        <li><i class="devicon-php-plain colored" aria-hidden="true"></i>PHP</li>
+                        <li><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="tec-fila">
+                    <h3>Desarrollo web</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-html5-plain colored" aria-hidden="true"></i>HTML5</li>
+                        <li><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS3</li>
+                        <li><i class="devicon-react-original colored" aria-hidden="true"></i>React</li>
+                        <li><i class="devicon-tailwindcss-original colored" aria-hidden="true"></i>Tailwind CSS</li>
+                        <li><i class="devicon-fastapi-plain colored" aria-hidden="true"></i>FastAPI</li>
+                    </ul>
+                </div>
+                <div class="tec-fila">
+                    <h3>Escritorio</h3>
+                    <ul class="chips">
+                        <li><i class="fa-solid fa-window-maximize icono-acento" aria-hidden="true"></i>Flet</li>
+                    </ul>
+                </div>
+                <div class="tec-fila">
+                    <h3>Bases de datos</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-mysql-plain colored" aria-hidden="true"></i>MySQL</li>
+                        <li><i class="devicon-sqlite-plain colored" aria-hidden="true"></i>SQLite</li>
+                        <li><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</li>
+                        <li><i class="devicon-supabase-plain colored" aria-hidden="true"></i>Supabase</li>
+                    </ul>
+                </div>
+                <div class="tec-fila">
+                    <h3>Herramientas</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-vscode-plain colored" aria-hidden="true"></i>VS Code</li>
+                        <li><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</li>
+                        <li><i class="devicon-github-original" aria-hidden="true"></i>GitHub</li>
+                        <li><i class="devicon-githubactions-plain colored" aria-hidden="true"></i>GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="tec-fila">
+                    <h3>Profundizando</h3>
+                    <ul class="chips">
+                        <li><img class="icono-claro" src="img/pwa-svgrepo-com.svg" alt="" aria-hidden="true">Apps web progresivas</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles icono-acento" aria-hidden="true"></i>IA aplicada (API de Gemini)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================
+            PROYECTOS
+        ========================== -->
+        <section class="seccion contenedor" id="proyectos">
+            <h2 class="titulo-seccion">Proyectos</h2>
+
+            <!-- Proyecto 1 -->
+            <article class="proyecto proyecto-destacado">
+                <div class="proyecto-texto">
+                    <p class="tipo tipo-cliente"><span class="estado-punto" aria-hidden="true"></span>Cliente real, en uso</p>
+                    <h3>Sistema para corralón y ferretería</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>Python</li><li>Flet</li><li>SQLite</li>
+                    </ul>
                     <p>
                         Sistema de escritorio a medida para un corralón y ferretería que trabajaba todo en papel.
-                        Lo desarrollé para un cliente, lo instalé en su local y está en uso desde octubre de 2026,
-                        con versiones nuevas según lo que pide al usarlo.
+                        Lo desarrollé, lo instalé en el local y está en uso desde octubre de 2026, con versiones
+                        nuevas según lo que el cliente pide al usarlo.
                     </p>
-                    <ul class="proyecto-funciones">
+                    <ul class="funciones">
                         <li>Ventas y presupuestos en una sola pantalla, con buscador, lector de código de barras, atajos de teclado y recargos por tarjeta. Tickets en impresora térmica (ESC/POS).</li>
-                        <li>Cuentas corrientes de clientes por semana, con pagos, actualización de deudas a precios de hoy y resumen en PDF para mandar por WhatsApp.</li>
+                        <li>Cuentas corrientes por semana, con pagos, actualización de deudas a precios de hoy y resumen en PDF para mandar por WhatsApp.</li>
                         <li>Productos por rubro y proveedor (pensado para 10.000), stock con historial, aumentos masivos con vista previa y deshacer, y pedidos a proveedores en PDF.</li>
                         <li>Facturación electrónica con ARCA: Factura C y nota de crédito con los web services oficiales, firma digital y código QR.</li>
                         <li>Caja, usuarios con permisos, copias de seguridad automáticas (también en Google Drive) e importación y exportación de Excel.</li>
                         <li>584 pruebas automáticas, migraciones de la base de datos y una prueba de carga con 10.000 productos. Se instala como ejecutable para Windows.</li>
                     </ul>
-                </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/corralon-ventas.png" alt="Pantalla de ventas y presupuestos con productos cargados y las ventas del día" loading="lazy">
-                </div>
-
-            </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/corralon-cuentas.png" alt="Cuenta corriente de un cliente con las compras y pagos de la semana" loading="lazy">
-                <img class="captura" src="img/corralon-productos.png" alt="Lista de productos por rubro con proveedor, precio y stock" loading="lazy">
-                <img class="captura" src="img/corralon-aumentos.png" alt="Vista previa de un aumento de precios del 12 %" loading="lazy">
-            </div>
-
-        </article>
-
-        <!-- Proyecto 2 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Mail CRM: correo ordenado con IA</h3>
-
-                <div class="proyecto-links">
-                    <a href="https://github.com/AlesandroVi/mail-crm" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Código
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <i class="devicon-python-plain colored" title="Python"></i>
-                        <i class="devicon-fastapi-plain colored" title="FastAPI"></i>
-                        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
-                        <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
-                        <i class="devicon-supabase-plain colored" title="Supabase"></i>
-                        <i class="devicon-githubactions-plain colored" title="GitHub Actions"></i>
+                    <div class="enlaces">
+                        <span class="enlace-privado"><i class="fa-solid fa-lock" aria-hidden="true"></i> El código es privado porque es de un cliente</span>
                     </div>
-                    <p>
-                        CRM personal, desarrollado como proyecto propio y en uso todos los días, que lee mi Gmail,
-                        ordena el correo con reglas e inteligencia artificial (Gemini) y me ayuda con la búsqueda laboral.
-                        La IA propone y yo decido: nada cambia en Gmail sin confirmación y todo se puede deshacer.
-                    </p>
-                    <ul class="proyecto-funciones">
-                        <li>Clasifica cada mail con IA y aplica en Gmail papelera, archivo o estrella después de confirmar, con botón de deshacer.</li>
-                        <li>Tablero de postulaciones: la IA detecta mails de búsquedas laborales y los sugiere; también avisa qué mails enviados quedaron sin respuesta.</li>
-                        <li>Resumen diario escrito por la IA, avisos al celular (Web Push) y borradores de respuesta que nunca se envían solos.</li>
-                        <li>App instalable (PWA) desplegada en Render con base de datos en Supabase y revisión automática cada 3 horas con GitHub Actions.</li>
-                        <li>Auditoría de seguridad con herramientas profesionales (CSP, sesiones revocables, Row Level Security) y 51 pruebas automáticas.</li>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/corralon-cuentas.png" alt="Cuenta corriente de un cliente con las compras y pagos de la semana" width="1365" height="768" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/corralon-ventas.png" alt="Pantalla de ventas y presupuestos" width="1365" height="768" loading="lazy">
+                        <img class="captura" src="img/corralon-productos.png" alt="Lista de productos por rubro con proveedor, precio y stock" width="1365" height="768" loading="lazy">
+                        <img class="captura" src="img/corralon-aumentos.png" alt="Vista previa de un aumento de precios del 12 %" width="1365" height="768" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="proyecto">
+                <div class="proyecto-texto">
+                    <p class="tipo">Proyecto propio, en uso diario</p>
+                    <h3>Mail CRM: correo ordenado con IA</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>Python</li><li>FastAPI</li><li>JavaScript</li><li>Supabase</li><li>GitHub Actions</li>
                     </ul>
-                </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/mailcrm-mails.png" alt="Panel de Mail CRM con el resumen del día y los mails clasificados por la IA" loading="lazy">
-                </div>
-
-            </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/mailcrm-postulaciones.png" alt="Tablero de postulaciones laborales" loading="lazy">
-                <img class="captura" src="img/mailcrm-seguimientos.png" alt="Mails enviados que todavía no tienen respuesta" loading="lazy">
-                <img class="captura" src="img/mailcrm-estadisticas.png" alt="Estadísticas de mails por semana, categoría y remitente" loading="lazy">
-            </div>
-
-        </article>
-
-        <!-- Proyecto 3 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Sistema de Mantenimiento de Planta</h3>
-
-                <div class="proyecto-links">
-                    <a href="https://github.com/AlesandroVi/mantenimiento-planta" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Código
-                    </a>
-                    <a href="https://alesandrovi.github.io/mantenimiento-planta/" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo en línea
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <i class="devicon-react-original colored" title="React"></i>
-                        <i class="devicon-tailwindcss-original colored" title="Tailwind CSS"></i>
-                        <i class="devicon-supabase-plain colored" title="Supabase"></i>
-                        <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
-                    </div>
                     <p>
-                        Sistema web, desarrollado como proyecto personal, para el área de mantenimiento
-                        de una planta industrial: equipos, órdenes de trabajo y stock del pañol de repuestos.
+                        CRM personal que lee mi Gmail, ordena el correo con reglas e inteligencia artificial (Gemini)
+                        y me ayuda con la búsqueda laboral. La IA propone y yo decido: nada cambia en Gmail sin
+                        confirmación y todo se puede deshacer.
                     </p>
-                    <ul class="proyecto-funciones">
-                        <li>Órdenes de trabajo preventivas y correctivas con el ciclo pendiente, en curso y cerrada, prioridad y técnico asignado.</li>
+                    <ul class="funciones">
+                        <li>Clasifica cada mail con IA y aplica en Gmail papelera, archivo o estrella después de confirmar, con botón de deshacer.</li>
+                        <li>Tablero de postulaciones: detecta mails de búsquedas laborales y avisa qué mails enviados quedaron sin respuesta.</li>
+                        <li>Resumen diario escrito por la IA, avisos al celular (Web Push) y borradores de respuesta que nunca se envían solos.</li>
+                        <li>App instalable (PWA) en Render con base de datos en Supabase y revisión automática cada 3 horas con GitHub Actions.</li>
+                        <li>Auditoría de seguridad (CSP, sesiones revocables, Row Level Security) y 51 pruebas automáticas.</li>
+                    </ul>
+                    <div class="enlaces">
+                        <a href="https://github.com/AlesandroVi/mail-crm" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
+                    </div>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/mailcrm-mails.png" alt="Panel de Mail CRM con el resumen del día y los mails clasificados por la IA" width="1280" height="900" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/mailcrm-postulaciones.png" alt="Tablero de postulaciones laborales" width="1280" height="640" loading="lazy">
+                        <img class="captura" src="img/mailcrm-seguimientos.png" alt="Mails enviados que todavía no tienen respuesta" width="1280" height="520" loading="lazy">
+                        <img class="captura" src="img/mailcrm-estadisticas.png" alt="Estadísticas de mails por semana, categoría y remitente" width="1280" height="820" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="proyecto">
+                <div class="proyecto-texto">
+                    <p class="tipo">Proyecto propio</p>
+                    <h3>Mantenimiento de planta</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>React</li><li>Tailwind CSS</li><li>Supabase</li><li>PostgreSQL</li>
+                    </ul>
+                    <p>
+                        Sistema web para el área de mantenimiento de una planta industrial: equipos,
+                        órdenes de trabajo y stock del pañol de repuestos.
+                    </p>
+                    <ul class="funciones">
+                        <li>Órdenes de trabajo preventivas y correctivas (pendiente, en curso y cerrada), con prioridad y técnico asignado.</li>
                         <li>Stock de repuestos con alerta de stock bajo; cada ingreso y retiro queda registrado con su orden de trabajo.</li>
-                        <li>Panel con reportes: órdenes por área, repuestos más usados y tiempo promedio de resolución, con exportación a CSV.</li>
-                        <li>Roles de supervisor y técnico con permisos controlados en la base de datos con Row Level Security, verificados con 29 pruebas automáticas.</li>
+                        <li>Reportes: órdenes por área, repuestos más usados y tiempo promedio de resolución, con exportación a CSV.</li>
+                        <li>Roles de supervisor y técnico con Row Level Security, verificados con 29 pruebas automáticas.</li>
                         <li>Publicado en GitHub Pages con datos de prueba que se reinician todas las noches.</li>
                     </ul>
-                </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/mantenimiento-panel.jpg" alt="Panel del sistema de mantenimiento con indicadores y reportes" loading="lazy">
-                </div>
-
-            </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/mantenimiento-ordenes.jpg" alt="Listado de órdenes de trabajo" loading="lazy">
-                <img class="captura" src="img/mantenimiento-orden.jpg" alt="Detalle de una orden de trabajo con repuestos usados" loading="lazy">
-                <img class="captura" src="img/mantenimiento-repuestos.jpg" alt="Stock de repuestos con alertas de stock bajo" loading="lazy">
-            </div>
-
-        </article>
-
-        <!-- Proyecto 4 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Sistema de Gestión Docente</h3>
-
-                <div class="proyecto-links">
-                    <a href="https://github.com/AlesandroVi/gestion-docente" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Código
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
-                            alt="Python"
-                        />
-                        <i class="fa-solid fa-window-maximize icono-flet" title="Flet"></i>
-                        <i class="devicon-sqlite-plain colored" title="SQLite"></i>
+                    <div class="enlaces">
+                        <a class="enlace-fuerte" href="https://alesandrovi.github.io/mantenimiento-planta/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Probar la demo</a>
+                        <a href="https://github.com/AlesandroVi/mantenimiento-planta" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                     </div>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/mantenimiento-panel.jpg" alt="Panel del sistema de mantenimiento con indicadores y reportes" width="1400" height="760" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/mantenimiento-ordenes.jpg" alt="Listado de órdenes de trabajo" width="1400" height="875" loading="lazy">
+                        <img class="captura" src="img/mantenimiento-orden.jpg" alt="Detalle de una orden de trabajo con repuestos usados" width="1400" height="875" loading="lazy">
+                        <img class="captura" src="img/mantenimiento-repuestos.jpg" alt="Stock de repuestos con alertas de stock bajo" width="1400" height="875" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 4 -->
+            <article class="proyecto">
+                <div class="proyecto-texto">
+                    <p class="tipo">Proyecto de la carrera</p>
+                    <h3>Gestión docente</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>Python</li><li>Flet</li><li>SQLite</li>
+                    </ul>
                     <p>
-                        Aplicación de escritorio, desarrollada como proyecto de la carrera,
-                        para la administración del personal docente de un instituto de nivel superior.
+                        Aplicación de escritorio para administrar el personal docente de un instituto de nivel superior.
                     </p>
-                    <ul class="proyecto-funciones">
+                    <ul class="funciones">
                         <li>Alta, edición y búsqueda de docentes, con importación y exportación de planillas Excel.</li>
                         <li>Carreras, materias y designaciones, con control de licencias y suplencias.</li>
                         <li>Reportes de materias sin cubrir y de docentes ausentes sin suplente.</li>
                         <li>Constancias en PDF con los datos de la institución configurables.</li>
-                        <li>Contraseña guardada como hash PBKDF2, copias de seguridad automáticas y pruebas unitarias de las validaciones.</li>
-                        <li>Se distribuye como ejecutable para Windows.</li>
+                        <li>Contraseña guardada como hash PBKDF2, copias de seguridad automáticas y pruebas unitarias. Se distribuye como ejecutable para Windows.</li>
                     </ul>
-                </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/docentes-inicio.jpg" alt="Pantalla de inicio del sistema de gestión docente" loading="lazy">
-                </div>
-
-            </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/docentes-gestionar.jpg" alt="Listado de docentes cargados" loading="lazy">
-                <img class="captura" src="img/docentes-designaciones.jpg" alt="Formulario de nueva designación" loading="lazy">
-                <img class="captura" src="img/docentes-reportes.jpg" alt="Reporte de materias sin cubrir" loading="lazy">
-            </div>
-
-        </article>
-
-        <!-- Proyecto 5 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Sistema de Stock y Ventas de Bebidas</h3>
-
-                <div class="proyecto-links">
-                    <a href="https://github.com/AlesandroVi/sistema-bebidas" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Código
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <i class="devicon-php-plain colored" title="PHP"></i>
-                        <i class="devicon-mysql-plain colored" title="MySQL"></i>
-                        <i class="devicon-html5-plain colored" title="HTML5"></i>
-                        <i class="devicon-css3-plain colored" title="CSS3"></i>
+                    <div class="enlaces">
+                        <a href="https://github.com/AlesandroVi/gestion-docente" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                     </div>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/docentes-inicio.jpg" alt="Pantalla de inicio del sistema de gestión docente" width="1400" height="760" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/docentes-gestionar.jpg" alt="Listado de docentes cargados" width="1400" height="760" loading="lazy">
+                        <img class="captura" src="img/docentes-designaciones.jpg" alt="Formulario de nueva designación" width="1400" height="760" loading="lazy">
+                        <img class="captura" src="img/docentes-reportes.jpg" alt="Reporte de materias sin cubrir" width="1400" height="760" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 5 -->
+            <article class="proyecto">
+                <div class="proyecto-texto">
+                    <p class="tipo">Proyecto de la carrera</p>
+                    <h3>Stock y ventas de bebidas</h3>
+                    <ul class="pila" aria-label="Tecnologías">
+                        <li>PHP</li><li>MySQL</li><li>HTML5</li><li>CSS3</li>
+                    </ul>
                     <p>
-                        Sistema web en PHP y MySQL, desarrollado como proyecto de la carrera,
-                        pensado para que un local de bebidas controle su stock y sus ventas.
+                        Sistema web para que un local de bebidas controle su stock y sus ventas.
                     </p>
-                    <ul class="proyecto-funciones">
+                    <ul class="funciones">
                         <li>Catálogo con filtro por categoría (aguas, cervezas, gaseosas, isotónicas y jugos) y stock visible.</li>
-                        <li>Carrito de pedidos con cantidades editables, subtotales y total calculado automáticamente.</li>
+                        <li>Carrito con cantidades editables, subtotales y total calculado automáticamente.</li>
                         <li>Cada pedido se confirma dentro de una transacción: se guarda completo o no se guarda, y descuenta el stock.</li>
-                        <li>Panel de administración con resumen del día, alertas de stock bajo, gestión de productos y listado de pedidos.</li>
+                        <li>Panel de administración con resumen del día, alertas de stock bajo, productos y pedidos.</li>
                         <li>Contraseñas con hash, bloqueo tras intentos fallidos, protección CSRF y consultas preparadas.</li>
                     </ul>
-                </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/bebidas.jpg" alt="Pantalla principal del sistema de bebidas" loading="lazy">
-                </div>
-
-            </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/carrito.jpg" alt="Carrito de compras" loading="lazy">
-                <img class="captura" src="img/agregarP.jpg" alt="Formulario para agregar productos" loading="lazy">
-                <img class="captura" src="img/pedidosCargados.jpg" alt="Listado de pedidos cargados" loading="lazy">
-            </div>
-
-        </article>
-
-        <!-- Proyecto 6 -->
-        <article class="proyecto">
-
-            <div class="proyecto-header">
-                <h3>Portfolio Personal</h3>
-
-                <div class="proyecto-links">
-                    <a href="https://github.com/AlesandroVi/portafolio" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Código
-                    </a>
-                    <a href="https://alesandrovi.github.io/portafolio/" target="_blank" rel="noopener">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Sitio web
-                    </a>
-                </div>
-            </div>
-
-            <div class="proyecto-contenido">
-
-                <div class="proyecto-info">
-                    <div class="proyecto-tecnologias">
-                        <i class="devicon-html5-plain colored"></i>
-                        <i class="devicon-css3-plain colored"></i>
-                        <i class="devicon-javascript-plain colored"></i>
+                    <div class="enlaces">
+                        <a href="https://github.com/AlesandroVi/sistema-bebidas" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                     </div>
+                </div>
+                <div class="proyecto-medios">
+                    <img class="captura principal" src="img/bebidas.jpg" alt="Pantalla principal del sistema de bebidas" width="1400" height="661" loading="lazy">
+                    <div class="miniaturas">
+                        <img class="captura" src="img/carrito.jpg" alt="Carrito de compras" width="1400" height="653" loading="lazy">
+                        <img class="captura" src="img/agregarP.jpg" alt="Formulario para agregar productos" width="1400" height="655" loading="lazy">
+                        <img class="captura" src="img/pedidosCargados.jpg" alt="Listado de pedidos cargados" width="1400" height="796" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Proyecto 6: este sitio -->
+            <article class="proyecto-mini">
+                <div>
+                    <h3>Este portfolio</h3>
                     <p>
-                        Este mismo sitio: un portfolio responsive, con menú
-                        hamburguesa para celulares, desarrollado para presentar
-                        mis proyectos y tecnologías de manera clara y accesible.
+                        Hecho a mano con HTML, CSS y JavaScript, sin frameworks. Se adapta del celular a la
+                        computadora, tiene modo claro y oscuro, y se puede recorrer entero con el teclado.
                     </p>
                 </div>
-
-                <div class="proyecto-demo">
-                    <img src="img/portfolio-escritorio.jpg" alt="Portfolio en una pantalla de computadora" loading="lazy">
+                <div class="enlaces">
+                    <a href="https://github.com/AlesandroVi/portafolio" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                 </div>
+            </article>
+        </section>
 
+        <!-- ==========================
+            CONTACTO
+        ========================== -->
+        <section class="seccion contenedor contacto" id="contacto">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <p class="contacto-bajada">¿Tenés una búsqueda abierta o un sistema que necesitás? Escribime.</p>
+            <a class="email-grande" href="mailto:alesandrovill@gmail.com">alesandrovill@gmail.com</a>
+            <div class="hero-acciones">
+                <a class="boton boton-principal" href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a class="boton boton-secundario" href="https://github.com/AlesandroVi" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                </a>
+                <a class="boton boton-secundario" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
+                    <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
+                </a>
             </div>
-
-            <div class="proyecto-galeria">
-                <img class="captura" src="img/portfolio-celular.jpg" alt="Portfolio en un celular" loading="lazy">
-                <img class="captura" src="img/portfolio-menu.jpg" alt="Menú hamburguesa abierto en el celular" loading="lazy">
-                <img class="captura" src="img/portfolio-tecnologias.jpg" alt="Sección de tecnologías" loading="lazy">
-            </div>
-
-        </article>
-
-    </section>
-
-    <!-- ==========================
-        SECCIÓN CONTACTO
-    ========================== -->
-    <section class="contacto" id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Tenés una consulta o un proyecto en mente? Escribime.</p>
-        <a class="email-contacto" href="mailto:alesandrovill@gmail.com">alesandrovill@gmail.com</a>
-
-        <div class="redes">
-            <a href="mailto:alesandrovill@gmail.com" aria-label="Correo" title="Enviarme un correo">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/alesandro-villalba-bb6508367" target="_blank" rel="noopener" aria-label="LinkedIn" title="Mi perfil de LinkedIn">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/AlesandroVi" target="_blank" rel="noopener" aria-label="GitHub" title="Mi perfil de GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-
-        <a class="boton-cv" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
-            <i class="fa-solid fa-download"></i> Descargar CV
-        </a>
-    </section>
+        </section>
 
     </main>
 
     <footer class="pie">
-        <p>&copy; <span id="anio">2026</span> Miguel Alesandro Villalba · Hecho con HTML, CSS y JavaScript</p>
+        <div class="contenedor">
+            <p>&copy; <span id="anio">2026</span> Miguel Alesandro Villalba</p>
+            <a href="#inicio">Volver arriba</a>
+        </div>
     </footer>
 
-    <!-- Visor de capturas (se abre al tocar una imagen de los proyectos) -->
+    <!-- Visor de capturas -->
     <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Captura ampliada" hidden>
-        <button class="visor-cerrar" aria-label="Cerrar">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <img src="" alt="">
+        <button class="visor-boton visor-cerrar" type="button" aria-label="Cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <button class="visor-boton visor-anterior" type="button" aria-label="Captura anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <button class="visor-boton visor-siguiente" type="button" aria-label="Captura siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
     </div>
 
     <script src="JS/script.js"></script>
