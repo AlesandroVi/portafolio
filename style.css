@@ -1010,36 +1010,52 @@ ul {
     text-decoration-color: var(--acento);
 }
 
-/* Plomada: mi marca para proyectos a medida */
+/* Mi marca (solo el ícono) para proyectos a medida */
 .marca-plomada {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 16px 40px;
+    gap: 20px 28px;
     margin-top: clamp(32px, 5vw, 48px);
     padding-top: clamp(24px, 4vw, 36px);
     border-top: 1px solid var(--linea);
 }
 
-.logo-plomada {
+.icono-marca {
     flex: none;
-    width: clamp(190px, 48vw, 250px);
+    width: clamp(64px, 16vw, 84px);
     height: auto;
 }
 
-.plomada-claro,
-:root[data-theme="light"] .plomada-oscuro {
+.marca-sobre-claro,
+:root[data-theme="light"] .marca-sobre-oscuro {
     display: none;
 }
 
-:root[data-theme="light"] .plomada-claro {
+:root[data-theme="light"] .marca-sobre-claro {
     display: block;
 }
 
+.marca-plomada h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
 .marca-plomada p {
-    flex: 1 1 300px;
-    max-width: 52ch;
+    max-width: 60ch;
+    margin-top: 4px;
     color: var(--texto-suave);
+}
+
+@media (max-width: 480px) {
+    .marca-plomada {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .icono-marca {
+        width: 56px;
+    }
 }
 
 /* ==========================
