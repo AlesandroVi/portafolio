@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con React, Supabase, Python y Flet.">
+    <meta name="description" content="Portfolio de Miguel Alesandro Villalba: proyectos de desarrollo web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
     <meta name="author" content="Miguel Alesandro Villalba">
     <meta name="theme-color" content="#150f24">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miguel Alesandro Villalba | Portfolio">
-    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con React, Supabase, Python y Flet.">
+    <meta property="og:description" content="Proyectos de desarrollo web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
     <meta property="og:image" content="https://alesandrovi.github.io/portafolio/img/portfolio-escritorio.jpg">
     <title>Miguel Alesandro Villalba | Portfolio</title>
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -79,7 +79,8 @@
                 de la carrera desarrollé un sistema de stock y ventas pensado para un local de
                 bebidas y un sistema de gestión docente pensado para un instituto, que funciona
                 como programa de escritorio para Windows. Por mi cuenta hice un sistema web de
-                mantenimiento e inventario de repuestos pensado para una planta industrial.
+                mantenimiento e inventario de repuestos pensado para una planta industrial y un CRM
+                personal que ordena mi correo con inteligencia artificial y me ayuda en la búsqueda laboral.
             </p>
             <p>
                 Programo en Python, PHP, JavaScript y C, y trabajo con bases de datos MySQL,
@@ -153,6 +154,10 @@
                         <i class="devicon-tailwindcss-original colored"></i>
                         <span>Tailwind CSS</span>
                     </div>
+                    <div class="tecnologia">
+                        <i class="devicon-fastapi-plain colored"></i>
+                        <span>FastAPI</span>
+                    </div>
                 </div>
             </div>
 
@@ -209,6 +214,10 @@
                         <i class="devicon-github-original colored"></i>
                         <span>GitHub</span>
                     </div>
+                    <div class="tecnologia">
+                        <i class="devicon-githubactions-plain colored"></i>
+                        <span>GitHub Actions</span>
+                    </div>
                 </div>
             </div>
 
@@ -220,6 +229,10 @@
                     <div class="tecnologia">
                         <img class="icono-claro" src="img/pwa-svgrepo-com.svg" alt="Progressive Web App" />
                         <span>Aplicaciones Web Progresivas</span>
+                    </div>
+                    <div class="tecnologia">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <span>IA aplicada (API de Gemini)</span>
                     </div>
                 </div>
             </div>
@@ -235,6 +248,59 @@
         <h2>Proyectos</h2>
 
         <!-- Proyecto 1 -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Mail CRM: correo ordenado con IA</h3>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/AlesandroVi/mail-crm" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <i class="devicon-python-plain colored" title="Python"></i>
+                        <i class="devicon-fastapi-plain colored" title="FastAPI"></i>
+                        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                        <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                        <i class="devicon-supabase-plain colored" title="Supabase"></i>
+                        <i class="devicon-githubactions-plain colored" title="GitHub Actions"></i>
+                    </div>
+                    <p>
+                        CRM personal, desarrollado como proyecto propio y en uso todos los días, que lee mi Gmail,
+                        ordena el correo con reglas e inteligencia artificial (Gemini) y me ayuda con la búsqueda laboral.
+                        La IA propone y yo decido: nada cambia en Gmail sin confirmación y todo se puede deshacer.
+                    </p>
+                    <ul class="proyecto-funciones">
+                        <li>Clasifica cada mail con IA y aplica en Gmail papelera, archivo o estrella después de confirmar, con botón de deshacer.</li>
+                        <li>Tablero de postulaciones: la IA detecta mails de búsquedas laborales y los sugiere; también avisa qué mails enviados quedaron sin respuesta.</li>
+                        <li>Resumen diario escrito por la IA, avisos al celular (Web Push) y borradores de respuesta que nunca se envían solos.</li>
+                        <li>App instalable (PWA) desplegada en Render con base de datos en Supabase y revisión automática cada 3 horas con GitHub Actions.</li>
+                        <li>Auditoría de seguridad con herramientas profesionales (CSP, sesiones revocables, Row Level Security) y 51 pruebas automáticas.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/mailcrm-mails.png" alt="Panel de Mail CRM con el resumen del día y los mails clasificados por la IA" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/mailcrm-postulaciones.png" alt="Tablero de postulaciones laborales" loading="lazy">
+                <img class="captura" src="img/mailcrm-seguimientos.png" alt="Mails enviados que todavía no tienen respuesta" loading="lazy">
+                <img class="captura" src="img/mailcrm-estadisticas.png" alt="Estadísticas de mails por semana, categoría y remitente" loading="lazy">
+            </div>
+
+        </article>
+
+        <!-- Proyecto 2 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
@@ -287,7 +353,7 @@
 
         </article>
 
-        <!-- Proyecto 2 -->
+        <!-- Proyecto 3 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
@@ -340,7 +406,7 @@
 
         </article>
 
-        <!-- Proyecto 3 -->
+        <!-- Proyecto 4 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
@@ -390,7 +456,7 @@
 
         </article>
 
-        <!-- Proyecto 4 -->
+        <!-- Proyecto 5 -->
         <article class="proyecto">
 
             <div class="proyecto-header">
