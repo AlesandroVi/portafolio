@@ -79,7 +79,7 @@
                 desarrollé e instalé un sistema de ventas, stock, cuentas corrientes y facturación
                 electrónica para un corralón y ferretería, que hoy está en uso. Como proyectos
                 de la carrera desarrollé un sistema de stock y ventas pensado para un local de
-                bebidas y, con mi equipo, un sistema de gestión docente que instalamos en un instituto
+                bebidas, un gestor de préstamos en cuotas con cobros, punitorios y recibos en PDF y, con mi equipo, un sistema de gestión docente que instalamos en un instituto
                 terciario y hoy usa su secretaría. Por mi cuenta hice un sistema web de
                 mantenimiento e inventario de repuestos pensado para una planta industrial y un CRM
                 personal que ordena mi correo con inteligencia artificial y me ayuda en la búsqueda laboral.
@@ -462,6 +462,59 @@
                 <img class="captura" src="img/docentes-horarios.jpg" alt="Grilla semanal de horarios de una carrera" loading="lazy">
                 <img class="captura" src="img/docentes-ficha.jpg" alt="Ficha de un docente con su situación actual y sus datos" loading="lazy">
                 <img class="captura" src="img/docentes-avisos.jpg" alt="Campanita de avisos con reposos, licencias y materias sin cubrir" loading="lazy">
+            </div>
+
+        </article>
+
+        <!-- Proyecto: Gestor de Préstamos -->
+        <article class="proyecto">
+
+            <div class="proyecto-header">
+                <h3>Gestor de Préstamos</h3>
+
+                <div class="proyecto-links">
+                    <a href="https://github.com/AlesandroVi/gestor-prestamos" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> Código
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="proyecto-contenido">
+
+                <div class="proyecto-info">
+                    <div class="proyecto-tecnologias">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+                            alt="Python"
+                        />
+                        <i class="fa-solid fa-window-maximize icono-flet" title="Flet"></i>
+                        <i class="devicon-sqlite-plain colored" title="SQLite"></i>
+                    </div>
+                    <p>
+                        Aplicación de escritorio, desarrollada como proyecto de la carrera, para administrar
+                        préstamos personales en cuotas: clientes, cobros, vencimientos y reportes (versión 3.0.0).
+                    </p>
+                    <ul class="proyecto-funciones">
+                        <li>Panel con indicadores de lo prestado, cobrado, saldo y morosidad, gráfico mensual y filtro por fechas.</li>
+                        <li>Préstamos en cuotas con interés, cobro con la fecha real del pago, punitorio diario por mora y cancelación anticipada con descuento.</li>
+                        <li>Recibo en PDF por cada cuota, con número correlativo e importe en letras, y reportes PDF por cliente y por préstamo.</li>
+                        <li>Vencimientos próximos y vencidos con aviso al cliente por WhatsApp, y ficha del cliente con todo su historial.</li>
+                        <li>Exportación a Excel y CSV, validación de DNI, teléfono, email, montos y fechas.</li>
+                        <li>Login con contraseña con hash PBKDF2 y bloqueo tras intentos fallidos, migración automática de la base y ejecutable para Windows.</li>
+                    </ul>
+                </div>
+
+                <div class="proyecto-demo">
+                    <img src="img/prestamos-dashboard.jpg" alt="Panel del gestor de préstamos con indicadores y gráfico de cobranza" loading="lazy">
+                </div>
+
+            </div>
+
+            <div class="proyecto-galeria">
+                <img class="captura" src="img/prestamos-clientes.jpg" alt="Gestión de clientes con formulario y listado" loading="lazy">
+                <img class="captura" src="img/prestamos-prestamos.jpg" alt="Alta de préstamos y listado con estado de cada uno" loading="lazy">
+                <img class="captura" src="img/prestamos-cuotas.jpg" alt="Préstamos pendientes con cuotas vencidas" loading="lazy">
             </div>
 
         </article>
