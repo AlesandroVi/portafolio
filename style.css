@@ -1010,6 +1010,38 @@ ul {
     text-decoration-color: var(--acento);
 }
 
+/* Plomada: mi marca para proyectos a medida */
+.marca-plomada {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 40px;
+    margin-top: clamp(32px, 5vw, 48px);
+    padding-top: clamp(24px, 4vw, 36px);
+    border-top: 1px solid var(--linea);
+}
+
+.logo-plomada {
+    flex: none;
+    width: clamp(190px, 48vw, 250px);
+    height: auto;
+}
+
+.plomada-claro,
+:root[data-theme="light"] .plomada-oscuro {
+    display: none;
+}
+
+:root[data-theme="light"] .plomada-claro {
+    display: block;
+}
+
+.marca-plomada p {
+    flex: 1 1 300px;
+    max-width: 52ch;
+    color: var(--texto-suave);
+}
+
 /* ==========================
    PIE
 ========================== */
