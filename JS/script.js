@@ -170,6 +170,34 @@ if (visor) {
 }
 
 // ==========================
+// PROYECTOS QUE ENTRAN AL SCROLLEAR
+// ==========================
+
+const aRevelar = document.querySelectorAll(".proyecto, .proyecto-mini");
+const conMovimiento = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if ("IntersectionObserver" in window && conMovimiento) {
+    const lista = [...aRevelar];
+    const revelador = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            // Muestra este proyecto y los de arriba (por si se saltaron con el índice)
+            lista.slice(0, lista.indexOf(entrada.target) + 1).forEach((el) => {
+                el.classList.add("visible");
+                revelador.unobserve(el);
+            });
+        });
+    }, { rootMargin: "0px 0px -12% 0px" });
+
+    aRevelar.forEach((el) => {
+        // Lo que ya está en pantalla al cargar no se esconde
+        if (el.getBoundingClientRect().top < window.innerHeight) return;
+        el.classList.add("revelar");
+        revelador.observe(el);
+    });
+}
+
+// ==========================
 // FUNCIONES PLEGABLES (en pantallas chicas se ven las 3 primeras)
 // ==========================
 

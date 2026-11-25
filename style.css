@@ -227,9 +227,11 @@ ul {
     display: none;
 }
 
-/* Botón de tema: un solo ícono (luna = oscuro, sol = claro) que gira al cambiar */
+/* Botón de tema: luna = oscuro, sol = claro.
+   Al cambiar, el ícono actual baja y se esconde y el otro sube desde abajo (amanecer / atardecer). */
 .boton-tema {
     position: relative;
+    overflow: hidden;
     display: inline-grid;
     place-items: center;
     width: 44px;
@@ -251,24 +253,28 @@ ul {
 
 .boton-tema i {
     grid-area: 1 / 1;
-    transition: transform 0.45s cubic-bezier(0.3, 1.2, 0.5, 1), opacity 0.25s;
+    transition:
+        transform 0.55s cubic-bezier(0.5, 0, 0.2, 1.25),
+        opacity 0.35s ease;
 }
 
-/* Modo oscuro: se ve la luna */
-.boton-tema .fa-sun {
-    opacity: 0;
-    transform: rotate(-90deg) scale(0.5);
-}
-
-/* Modo claro: se ve el sol */
+/* El ícono que no corresponde espera abajo, fuera del botón */
+.boton-tema .fa-sun,
 :root[data-theme="light"] .boton-tema .fa-moon {
     opacity: 0;
-    transform: rotate(90deg) scale(0.5);
+    transform: translateY(150%) rotate(-45deg);
 }
 
+.boton-tema .fa-moon,
 :root[data-theme="light"] .boton-tema .fa-sun {
     opacity: 1;
     transform: none;
+}
+
+/* El que sube entra un poco después del que baja */
+:root[data-theme="light"] .boton-tema .fa-sun,
+:root:not([data-theme="light"]) .boton-tema .fa-moon {
+    transition-delay: 0.12s;
 }
 
 /* ==========================
@@ -466,6 +472,31 @@ ul {
 @keyframes aviso {
     0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--en-uso) 60%, transparent); }
     100% { box-shadow: 0 0 0 10px color-mix(in srgb, var(--en-uso) 0%, transparent); }
+}
+
+/* Proyectos que entran al scrollear (la clase la pone el JS, así sin JS se ve todo) */
+@media (prefers-reduced-motion: no-preference) {
+    .revelar {
+        opacity: 0;
+        transform: translateY(64px);
+        transition:
+            opacity 0.7s ease-out,
+            transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .revelar .proyecto-medios {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+            opacity 0.7s 0.15s ease-out,
+            transform 0.9s 0.15s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .revelar.visible,
+    .revelar.visible .proyecto-medios {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* Cambio de tema: el color nuevo se expande en círculo desde el interruptor */
