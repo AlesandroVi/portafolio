@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <link rel="stylesheet" href="style.css?v=2026-11-25j">
+    <link rel="stylesheet" href="style.css?v=2026-11-25k">
 </head>
 <body>
     <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -374,37 +374,21 @@
                 </div>
             </article>
 
-            <!-- Proyecto 5 -->
-            <article class="proyecto" id="p-prestamos">
-                <div class="proyecto-texto">
+            <!-- Proyecto 5: tarjeta corta -->
+            <article class="proyecto-mini" id="p-prestamos">
+                <div>
                     <p class="tipo">Proyecto de la carrera</p>
                     <h3>Gestor de préstamos</h3>
+                    <p>
+                        Aplicación de escritorio para administrar préstamos en cuotas: cobros con punitorio
+                        por mora, recibos en PDF con el importe en letras y avisos de vencimiento por WhatsApp.
+                    </p>
                     <ul class="pila" aria-label="Tecnologías">
                         <li>Python</li><li>Flet</li><li>SQLite</li>
                     </ul>
-                    <p>
-                        Aplicación de escritorio para administrar préstamos personales en cuotas:
-                        clientes, cobros, vencimientos y reportes (versión 3.0.0).
-                    </p>
-                    <ul class="funciones">
-                        <li>Panel con indicadores de lo prestado, cobrado, saldo y morosidad, gráfico mensual y filtro por fechas.</li>
-                        <li>Préstamos en cuotas con interés, cobro con la fecha real del pago, punitorio diario por mora y cancelación anticipada con descuento.</li>
-                        <li>Recibo en PDF por cada cuota, con número correlativo e importe en letras, y reportes PDF por cliente y por préstamo.</li>
-                        <li>Vencimientos próximos y vencidos con aviso al cliente por WhatsApp, y ficha del cliente con todo su historial.</li>
-                        <li>Exportación a Excel y CSV, y validación de DNI, teléfono, email, montos y fechas.</li>
-                        <li>Login con hash PBKDF2 y bloqueo tras intentos fallidos, migración automática de la base y ejecutable para Windows.</li>
-                    </ul>
-                    <div class="enlaces">
-                        <a href="https://github.com/AlesandroVi/gestor-prestamos" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
-                    </div>
                 </div>
-                <div class="proyecto-medios">
-                    <img class="captura principal" src="img/prestamos-dashboard.jpg" alt="Panel del gestor de préstamos con indicadores y gráfico de cobranza" width="1366" height="800" loading="lazy">
-                    <div class="miniaturas">
-                        <img class="captura" src="img/prestamos-clientes.jpg" alt="Gestión de clientes con formulario y listado" width="1366" height="800" loading="lazy">
-                        <img class="captura" src="img/prestamos-prestamos.jpg" alt="Alta de préstamos y listado con estado de cada uno" width="1366" height="800" loading="lazy">
-                        <img class="captura" src="img/prestamos-vencimientos.jpg" alt="Vencimientos con recargo por mora y aviso por WhatsApp" width="1366" height="800" loading="lazy">
-                    </div>
+                <div class="enlaces">
+                    <a href="https://github.com/AlesandroVi/gestor-prestamos" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
                 </div>
             </article>
 
@@ -477,6 +461,6 @@
         <button class="visor-boton visor-siguiente" type="button" aria-label="Captura siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
     </div>
 
-    <script src="JS/script.js?v=2026-11-25j"></script>
+    <script src="JS/script.js?v=2026-11-25k"></script>
 </body>
 </html>

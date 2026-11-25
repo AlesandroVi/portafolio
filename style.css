@@ -963,6 +963,19 @@ ul {
     color: var(--texto-suave);
 }
 
+.proyecto-mini .tipo {
+    margin: 0 0 6px;
+}
+
+.proyecto-mini .pila {
+    margin: 14px 0 0;
+}
+
+/* Dos tarjetas cortas seguidas: la segunda más pegada */
+.proyecto-mini + .proyecto-mini {
+    margin-top: 16px;
+}
+
 .proyecto-mini .enlaces {
     margin-top: 0;
 }
