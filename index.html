@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Miguel Alesandro Villalba: sistemas de gestión web y de escritorio con React, Supabase, Python, FastAPI, Flet e inteligencia artificial.">
     <meta name="author" content="Miguel Alesandro Villalba">
-    <meta name="theme-color" content="#16121f">
+    <meta name="theme-color" content="#17181a">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miguel Alesandro Villalba | Portfolio">
     <meta property="og:description" content="Sistemas de gestión para negocios reales: ventas, stock, facturación y más.">
@@ -46,8 +46,12 @@
             </nav>
 
             <div class="barra-acciones">
-                <button class="boton-icono boton-tema" type="button" aria-label="Cambiar a modo claro">
-                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                <button class="boton-tema" type="button" aria-label="Cambiar a modo claro">
+                    <span class="tema-pista" aria-hidden="true">
+                        <span class="tema-perilla"></span>
+                        <i class="fa-solid fa-moon"></i>
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
                 </button>
                 <button class="boton-icono menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
@@ -110,8 +114,8 @@
                         electrónica para un corralón y ferretería que antes trabajaba todo en papel.
                     </p>
                     <p>
-                        En la carrera hice un sistema de stock y ventas para un local de bebidas, un gestor de
-                        préstamos en cuotas y, con mi equipo, un sistema de gestión docente que hoy usa la
+                        En la carrera hice un gestor de préstamos en cuotas y, con mi equipo, un sistema
+                        de gestión docente que hoy usa la
                         secretaría de un instituto terciario. Por mi cuenta hice un sistema web de mantenimiento
                         para una planta industrial y un CRM que ordena mi correo con inteligencia artificial.
                     </p>
@@ -204,7 +208,7 @@
         ========================== -->
         <section class="seccion contenedor" id="proyectos">
             <h2 class="titulo-seccion">Proyectos</h2>
-            <p class="seccion-bajada">Dos sistemas en uso por clientes reales, uno que uso todos los días y tres de la carrera.</p>
+            <p class="seccion-bajada">Dos sistemas en uso por clientes reales, dos proyectos propios y uno de la carrera.</p>
 
             <nav class="indice" aria-label="Lista de proyectos">
                 <ul>
@@ -213,7 +217,6 @@
                     <li><a href="#p-mantenimiento"><span class="indice-nombre">Mantenimiento de planta</span><span class="indice-tipo">Propio, con demo</span></a></li>
                     <li><a href="#p-docentes"><span class="indice-nombre">Gestión docente</span><span class="indice-tipo indice-uso">En un instituto</span></a></li>
                     <li><a href="#p-prestamos"><span class="indice-nombre">Gestor de préstamos</span><span class="indice-tipo">Carrera</span></a></li>
-                    <li><a href="#p-bebidas"><span class="indice-nombre">Stock de bebidas</span><span class="indice-tipo">Carrera</span></a></li>
                 </ul>
             </nav>
 
@@ -389,39 +392,7 @@
                 </div>
             </article>
 
-            <!-- Proyecto 6 -->
-            <article class="proyecto proyecto-invertido" id="p-bebidas">
-                <div class="proyecto-texto">
-                    <p class="tipo">Proyecto de la carrera</p>
-                    <h3>Stock y ventas de bebidas</h3>
-                    <ul class="pila" aria-label="Tecnologías">
-                        <li>PHP</li><li>MySQL</li><li>HTML5</li><li>CSS3</li>
-                    </ul>
-                    <p>
-                        Sistema web para que un local de bebidas controle su stock y sus ventas.
-                    </p>
-                    <ul class="funciones">
-                        <li>Catálogo con filtro por categoría (aguas, cervezas, gaseosas, isotónicas y jugos) y stock visible.</li>
-                        <li>Carrito con cantidades editables, subtotales y total calculado automáticamente.</li>
-                        <li>Cada pedido se confirma dentro de una transacción: se guarda completo o no se guarda, y descuenta el stock.</li>
-                        <li>Panel de administración con resumen del día, alertas de stock bajo, productos y pedidos.</li>
-                        <li>Contraseñas con hash, bloqueo tras intentos fallidos, protección CSRF y consultas preparadas.</li>
-                    </ul>
-                    <div class="enlaces">
-                        <a href="https://github.com/AlesandroVi/sistema-bebidas" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Ver código</a>
-                    </div>
-                </div>
-                <div class="proyecto-medios">
-                    <img class="captura principal" src="img/bebidas.jpg" alt="Pantalla principal del sistema de bebidas" width="1400" height="661" loading="lazy">
-                    <div class="miniaturas">
-                        <img class="captura" src="img/carrito.jpg" alt="Carrito de compras" width="1400" height="653" loading="lazy">
-                        <img class="captura" src="img/agregarP.jpg" alt="Formulario para agregar productos" width="1400" height="655" loading="lazy">
-                        <img class="captura" src="img/pedidosCargados.jpg" alt="Listado de pedidos cargados" width="1400" height="796" loading="lazy">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Proyecto 6: este sitio -->
+            <!-- Este sitio -->
             <article class="proyecto-mini">
                 <div>
                     <h3>Este portfolio</h3>

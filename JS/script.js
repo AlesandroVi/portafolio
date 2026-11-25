@@ -222,10 +222,9 @@ function aplicarTema(tema) {
     else document.documentElement.removeAttribute("data-theme");
 
     if (botonTema) {
-        botonTema.querySelector("i").className = claro ? "fa-solid fa-moon" : "fa-solid fa-sun";
         botonTema.setAttribute("aria-label", claro ? "Cambiar a modo oscuro" : "Cambiar a modo claro");
     }
-    if (metaTema) metaTema.setAttribute("content", claro ? "#f7f5fb" : "#16121f");
+    if (metaTema) metaTema.setAttribute("content", claro ? "#f2f2f0" : "#17181a");
 }
 
 if (botonTema) {
@@ -233,9 +232,30 @@ if (botonTema) {
 
     botonTema.addEventListener("click", () => {
         const nuevo = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
-        aplicarTema(nuevo);
         try {
             localStorage.setItem("tema", nuevo);
         } catch (e) {}
+
+        const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!document.startViewTransition || sinMovimiento) {
+            aplicarTema(nuevo);
+            return;
+        }
+
+        // El tema nuevo se expande en círculo desde el interruptor
+        const r = botonTema.getBoundingClientRect();
+        const x = r.left + r.width / 2;
+        const y = r.top + r.height / 2;
+        const radio = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+        document.documentElement.classList.add("cambiando-tema");
+        const transicion = document.startViewTransition(() => aplicarTema(nuevo));
+        transicion.finished.finally(() => document.documentElement.classList.remove("cambiando-tema"));
+        transicion.ready.then(() => {
+            document.documentElement.animate(
+                { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radio}px at ${x}px ${y}px)`] },
+                { duration: 550, easing: "cubic-bezier(0.65, 0, 0.35, 1)", pseudoElement: "::view-transition-new(root)" }
+            );
+        });
     });
 }
