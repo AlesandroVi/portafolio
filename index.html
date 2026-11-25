@@ -79,8 +79,8 @@
                 desarrollé e instalé un sistema de ventas, stock, cuentas corrientes y facturación
                 electrónica para un corralón y ferretería, que hoy está en uso. Como proyectos
                 de la carrera desarrollé un sistema de stock y ventas pensado para un local de
-                bebidas y un sistema de gestión docente pensado para un instituto, que funciona
-                como programa de escritorio para Windows. Por mi cuenta hice un sistema web de
+                bebidas y, con mi equipo, un sistema de gestión docente que instalamos en un instituto
+                terciario y hoy usa su secretaría. Por mi cuenta hice un sistema web de
                 mantenimiento e inventario de repuestos pensado para una planta industrial y un CRM
                 personal que ordena mi correo con inteligencia artificial y me ayuda en la búsqueda laboral.
             </p>
@@ -416,6 +416,9 @@
                 <h3>Sistema de Gestión Docente</h3>
 
                 <div class="proyecto-links">
+                    <span class="proyecto-etiqueta" title="Instalado en la secretaría de un instituto terciario">
+                        <i class="fa-solid fa-school"></i> En uso en un instituto
+                    </span>
                     <a href="https://github.com/AlesandroVi/gestion-docente" target="_blank" rel="noopener">
                         <i class="fa-brands fa-github"></i> Código
                     </a>
@@ -435,16 +438,17 @@
                         <i class="devicon-sqlite-plain colored" title="SQLite"></i>
                     </div>
                     <p>
-                        Aplicación de escritorio, desarrollada como proyecto de la carrera,
-                        para la administración del personal docente de un instituto de nivel superior.
+                        Aplicación de escritorio para la secretaría de un instituto de nivel superior.
+                        Empezó como proyecto de la carrera, en equipo con tres compañeros; la instalamos
+                        en el instituto y la seguimos actualizando según lo que piden al usarla (versión 3.3.1).
                     </p>
                     <ul class="proyecto-funciones">
-                        <li>Alta, edición y búsqueda de docentes, con importación y exportación de planillas Excel.</li>
-                        <li>Carreras, materias y designaciones, con control de licencias y suplencias.</li>
-                        <li>Reportes de materias sin cubrir y de docentes ausentes sin suplente.</li>
-                        <li>Constancias en PDF con los datos de la institución configurables.</li>
-                        <li>Contraseña guardada como hash PBKDF2, copias de seguridad automáticas y pruebas unitarias de las validaciones.</li>
-                        <li>Se distribuye como ejecutable para Windows.</li>
+                        <li>Legajo de docentes con ficha completa (situación actual, materias, licencias y carpeta médica), búsqueda sin tildes e importación y exportación de Excel.</li>
+                        <li>Carreras, materias, designaciones y suplencias, y una grilla semanal de horarios que detecta choques de docente, curso y aula.</li>
+                        <li>Inicio con indicadores y avisos: reposos, licencias, materias sin cubrir y designaciones por vencer.</li>
+                        <li>Constancias de trabajo, de examen y de licencia médica en PDF, con número correlativo y libro de constancias emitidas.</li>
+                        <li>283 pruebas automáticas, revisión de bugs con pruebas de regresión y auditoría de seguridad (Gitleaks, Semgrep, Bandit, pip-audit) sin hallazgos críticos ni altos.</li>
+                        <li>Contraseña con hash PBKDF2, copias de seguridad automáticas, migraciones de la base y ejecutable portable para Windows con manual de usuario.</li>
                     </ul>
                 </div>
 
@@ -455,9 +459,9 @@
             </div>
 
             <div class="proyecto-galeria">
-                <img class="captura" src="img/docentes-gestionar.jpg" alt="Listado de docentes cargados" loading="lazy">
-                <img class="captura" src="img/docentes-designaciones.jpg" alt="Formulario de nueva designación" loading="lazy">
-                <img class="captura" src="img/docentes-reportes.jpg" alt="Reporte de materias sin cubrir" loading="lazy">
+                <img class="captura" src="img/docentes-horarios.jpg" alt="Grilla semanal de horarios de una carrera" loading="lazy">
+                <img class="captura" src="img/docentes-ficha.jpg" alt="Ficha de un docente con su situación actual y sus datos" loading="lazy">
+                <img class="captura" src="img/docentes-avisos.jpg" alt="Campanita de avisos con reposos, licencias y materias sin cubrir" loading="lazy">
             </div>
 
         </article>
