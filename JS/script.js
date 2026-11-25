@@ -170,6 +170,39 @@ if (visor) {
 }
 
 // ==========================
+// FUNCIONES PLEGABLES (en pantallas chicas se ven las 3 primeras)
+// ==========================
+
+document.querySelectorAll(".proyecto .funciones").forEach((lista, i) => {
+    const total = lista.children.length;
+    if (total <= 3) return;
+
+    if (!lista.id) lista.id = "funciones-" + (i + 1);
+    lista.classList.add("plegada");
+
+    const boton = document.createElement("button");
+    boton.type = "button";
+    boton.className = "ver-funciones";
+    boton.setAttribute("aria-controls", lista.id);
+    boton.setAttribute("aria-expanded", "false");
+
+    function actualizar() {
+        const abierta = !lista.classList.contains("plegada");
+        boton.setAttribute("aria-expanded", String(abierta));
+        boton.innerHTML = (abierta ? "Ver menos" : `Ver las ${total} funciones`) +
+            ' <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+    }
+
+    boton.addEventListener("click", () => {
+        lista.classList.toggle("plegada");
+        actualizar();
+    });
+
+    actualizar();
+    lista.after(boton);
+});
+
+// ==========================
 // AÑO DEL PIE
 // ==========================
 

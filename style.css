@@ -400,7 +400,7 @@ ul {
 ========================== */
 
 .seccion {
-    padding-bottom: clamp(56px, 8vw, 104px);
+    padding-bottom: clamp(48px, 6vw, 88px);
 }
 
 /* Línea divisoria alineada con el contenido (no con el borde de la pantalla) */
@@ -408,15 +408,26 @@ ul {
     content: "";
     display: block;
     height: 1px;
-    margin-bottom: clamp(56px, 8vw, 104px);
+    margin-bottom: clamp(48px, 6vw, 88px);
     background: var(--linea);
 }
 
 .titulo-seccion {
-    margin-bottom: clamp(28px, 4vw, 48px);
+    margin-bottom: clamp(24px, 3.5vw, 40px);
     font-size: clamp(1.9rem, 3.6vw, 2.75rem);
     font-weight: 700;
     letter-spacing: -0.025em;
+}
+
+.titulo-seccion:has(+ .seccion-bajada) {
+    margin-bottom: 12px;
+}
+
+.seccion-bajada {
+    max-width: 60ch;
+    margin-bottom: clamp(24px, 3.5vw, 40px);
+    color: var(--texto-suave);
+    font-size: 1.125rem;
 }
 
 /* ==========================
@@ -529,18 +540,98 @@ ul {
    PROYECTOS
 ========================== */
 
+/* Índice: atajo a cada proyecto (la sección es larga) */
+.indice ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    list-style: none;
+    border: 1px solid var(--linea);
+    border-radius: var(--radio);
+    background: var(--linea);
+}
+
+.indice a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 100%;
+    padding: 16px 20px;
+    background: var(--fondo);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.indice a:hover {
+    background: var(--superficie);
+}
+
+.indice-nombre {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    font-size: 1.0625rem;
+}
+
+.indice-tipo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+
+.indice-uso {
+    color: var(--en-uso);
+}
+
+.indice-uso::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
 .proyecto {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     gap: clamp(28px, 4vw, 56px);
     align-items: start;
-    padding-block: clamp(36px, 5vw, 56px);
+    padding-block: clamp(40px, 5vw, 64px);
     border-top: 1px solid var(--linea);
 }
 
-#proyectos .titulo-seccion + .proyecto {
+/* El proyecto principal va en un panel para que se distinga del resto */
+.proyecto-destacado {
+    margin-top: clamp(32px, 4vw, 48px);
+    padding: clamp(24px, 4vw, 48px);
+    border: 1px solid var(--linea);
+    border-radius: calc(var(--radio) + 6px);
+    background:
+        radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--en-uso) 7%, transparent), transparent 60%),
+        var(--superficie);
+}
+
+.proyecto-destacado + .proyecto {
+    margin-top: clamp(16px, 2vw, 24px);
     border-top: none;
-    padding-top: 0;
+}
+
+/* En escritorio las capturas acompañan la lectura y los proyectos alternan de lado */
+@media (min-width: 1025px) {
+    .proyecto-medios {
+        position: sticky;
+        top: calc(var(--alto-barra) + 24px);
+    }
+
+    .proyecto-invertido {
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+
+    .proyecto-invertido .proyecto-medios {
+        order: -1;
+    }
 }
 
 .tipo {
@@ -610,6 +701,31 @@ ul {
     width: 8px;
     height: 2px;
     background: var(--acento);
+}
+
+.ver-funciones {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 6px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--acento);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+}
+
+.ver-funciones i {
+    font-size: 0.8em;
+    transition: transform 0.2s;
+}
+
+.ver-funciones[aria-expanded="true"] i {
+    transform: rotate(180deg);
 }
 
 .enlaces {
@@ -694,6 +810,7 @@ ul {
 
 .captura:hover {
     border-color: var(--acento);
+    opacity: 0.92;
 }
 
 /* Proyecto chico: este portfolio */
@@ -727,6 +844,19 @@ ul {
    CONTACTO
 ========================== */
 
+.contacto::before {
+    display: none;
+}
+
+.contacto-panel {
+    padding: clamp(28px, 6vw, 72px);
+    border: 1px solid var(--linea);
+    border-radius: calc(var(--radio) + 6px);
+    background:
+        radial-gradient(90% 120% at 0% 100%, color-mix(in srgb, var(--acento) 14%, transparent), transparent 65%),
+        var(--superficie);
+}
+
 .contacto-bajada {
     color: var(--texto-suave);
     font-size: 1.125rem;
@@ -736,7 +866,7 @@ ul {
     display: inline-block;
     margin-top: 12px;
     font-family: var(--fuente-titulos);
-    font-size: clamp(1.6rem, 5.4vw, 4rem);
+    font-size: clamp(1.25rem, 5.6vw, 4rem);
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -869,6 +999,10 @@ ul {
         grid-template-columns: minmax(0, 1fr);
     }
 
+    .indice ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     /* En pantallas medianas la captura va arriba del texto */
     .proyecto-medios {
         order: -1;
@@ -923,9 +1057,49 @@ ul {
     }
 }
 
+/* Funciones: en pantallas chicas se muestran las primeras y el resto con un botón */
+@media (max-width: 860px) {
+    .funciones.plegada li:nth-child(n + 4) {
+        display: none;
+    }
+}
+
+@media (min-width: 861px) {
+    .ver-funciones {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
     .marca span {
         font-size: 1rem;
+    }
+
+    .hero {
+        padding-top: 36px;
+    }
+
+    .indice ul {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .indice a {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .indice-tipo {
+        flex: none;
+        font-size: 0.8125rem;
+    }
+
+    /* El panel del proyecto principal aprovecha casi todo el ancho en el celular */
+    .proyecto-destacado {
+        margin-inline: calc(var(--margen) * -1 + 8px);
+        padding: 20px 16px 28px;
     }
 
     .hero-acciones .boton {
@@ -953,8 +1127,36 @@ ul {
         gap: 12px;
     }
 
+    /* Miniaturas en fila deslizable: más grandes y legibles que 3 columnas chicas */
     .miniaturas {
-        gap: 8px;
+        display: flex;
+        gap: 10px;
+        margin-inline: calc(var(--margen) * -1);
+        padding-inline: var(--margen);
+        padding-bottom: 4px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: var(--margen);
+        scrollbar-width: none;
+    }
+
+    .miniaturas::-webkit-scrollbar {
+        display: none;
+    }
+
+    .miniaturas .captura {
+        flex: 0 0 72%;
+        scroll-snap-align: start;
+    }
+
+    .proyecto-destacado .miniaturas {
+        margin-inline: -16px;
+        padding-inline: 16px;
+        scroll-padding-inline: 16px;
+    }
+
+    .contacto-panel {
+        margin-inline: calc(var(--margen) * -1 + 8px);
     }
 
     .proyecto-mini {
@@ -982,7 +1184,7 @@ ul {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 330px) {
     .marca span {
         display: none;
     }

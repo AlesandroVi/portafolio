@@ -204,9 +204,21 @@
         ========================== -->
         <section class="seccion contenedor" id="proyectos">
             <h2 class="titulo-seccion">Proyectos</h2>
+            <p class="seccion-bajada">Dos sistemas en uso por clientes reales, uno que uso todos los días y tres de la carrera.</p>
+
+            <nav class="indice" aria-label="Lista de proyectos">
+                <ul>
+                    <li><a href="#p-corralon"><span class="indice-nombre">Corralón y ferretería</span><span class="indice-tipo indice-uso">Cliente real</span></a></li>
+                    <li><a href="#p-mail-crm"><span class="indice-nombre">Mail CRM con IA</span><span class="indice-tipo">Propio, uso diario</span></a></li>
+                    <li><a href="#p-mantenimiento"><span class="indice-nombre">Mantenimiento de planta</span><span class="indice-tipo">Propio, con demo</span></a></li>
+                    <li><a href="#p-docentes"><span class="indice-nombre">Gestión docente</span><span class="indice-tipo indice-uso">En un instituto</span></a></li>
+                    <li><a href="#p-prestamos"><span class="indice-nombre">Gestor de préstamos</span><span class="indice-tipo">Carrera</span></a></li>
+                    <li><a href="#p-bebidas"><span class="indice-nombre">Stock de bebidas</span><span class="indice-tipo">Carrera</span></a></li>
+                </ul>
+            </nav>
 
             <!-- Proyecto 1 -->
-            <article class="proyecto proyecto-destacado">
+            <article class="proyecto proyecto-destacado" id="p-corralon">
                 <div class="proyecto-texto">
                     <p class="tipo tipo-cliente"><span class="estado-punto" aria-hidden="true"></span>Cliente real, en uso</p>
                     <h3>Sistema para corralón y ferretería</h3>
@@ -241,7 +253,7 @@
             </article>
 
             <!-- Proyecto 2 -->
-            <article class="proyecto">
+            <article class="proyecto proyecto-invertido" id="p-mail-crm">
                 <div class="proyecto-texto">
                     <p class="tipo">Proyecto propio, en uso diario</p>
                     <h3>Mail CRM: correo ordenado con IA</h3>
@@ -275,7 +287,7 @@
             </article>
 
             <!-- Proyecto 3 -->
-            <article class="proyecto">
+            <article class="proyecto" id="p-mantenimiento">
                 <div class="proyecto-texto">
                     <p class="tipo">Proyecto propio</p>
                     <h3>Mantenimiento de planta</h3>
@@ -309,7 +321,7 @@
             </article>
 
             <!-- Proyecto 4 -->
-            <article class="proyecto">
+            <article class="proyecto proyecto-invertido" id="p-docentes">
                 <div class="proyecto-texto">
                     <p class="tipo tipo-cliente"><span class="estado-punto" aria-hidden="true"></span>Proyecto en equipo, en uso en un instituto</p>
                     <h3>Gestión docente</h3>
@@ -344,7 +356,7 @@
             </article>
 
             <!-- Proyecto 5 -->
-            <article class="proyecto">
+            <article class="proyecto" id="p-prestamos">
                 <div class="proyecto-texto">
                     <p class="tipo">Proyecto de la carrera</p>
                     <h3>Gestor de préstamos</h3>
@@ -378,7 +390,7 @@
             </article>
 
             <!-- Proyecto 6 -->
-            <article class="proyecto">
+            <article class="proyecto proyecto-invertido" id="p-bebidas">
                 <div class="proyecto-texto">
                     <p class="tipo">Proyecto de la carrera</p>
                     <h3>Stock y ventas de bebidas</h3>
@@ -428,6 +440,7 @@
             CONTACTO
         ========================== -->
         <section class="seccion contenedor contacto" id="contacto">
+            <div class="contacto-panel">
             <h2 class="titulo-seccion">Contacto</h2>
             <p class="contacto-bajada">¿Tenés una búsqueda abierta o un sistema que necesitás? Escribime.</p>
             <a class="email-grande" href="mailto:alesandrovill@gmail.com">alesandrovill@gmail.com</a>
@@ -441,6 +454,7 @@
                 <a class="boton boton-secundario" href="cv/CV-Miguel-Alesandro-Villalba.pdf" download>
                     <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
                 </a>
+            </div>
             </div>
         </section>
 
